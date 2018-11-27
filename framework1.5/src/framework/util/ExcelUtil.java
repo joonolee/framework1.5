@@ -12,8 +12,8 @@ import java.sql.Statement;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.Map.Entry;
+import java.util.Set;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -52,11 +52,11 @@ public class ExcelUtil {
 	/**
 	 * RecordSet을 엑셀 파일 형식으로 출력한다.
 	 * <br>
-	 * ex1) response로 rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 출력하는 경우 => ExcelUtil.setRecordSet(response, rs, ExcelUtil.CSV)
+	 * ex1) response로 rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 출력하는 경우 : ExcelUtil.setRecordSet(response, rs, ExcelUtil.CSV)
 	 * <br>
-	 * ex2) response로 rs를 열구분자 탭문자(\t) 인 구분자(CSV, TSV 등)파일 형식으로 출력하는 경우 => ExcelUtil.setRecordSet(response, rs, ExcelUtil.TSV)
+	 * ex2) response로 rs를 열구분자 탭문자(\t) 인 구분자(CSV, TSV 등)파일 형식으로 출력하는 경우 : ExcelUtil.setRecordSet(response, rs, ExcelUtil.TSV)
 	 * <br>
-	 * ex3) response로 rs를 excel xml 형식으로 출력하는 경우 => ExcelUtil.setRecordSet(response, rs, ExcelUtil.XML)
+	 * ex3) response로 rs를 excel xml 형식으로 출력하는 경우 : ExcelUtil.setRecordSet(response, rs, ExcelUtil.XML)
 	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs 엑셀 파일 형식으로 변환할 RecordSet 객체
@@ -80,7 +80,7 @@ public class ExcelUtil {
 	/**
 	 * RecordSet을 구분자(CSV, TSV 등)파일 형식으로 출력한다.
 	 * <br>
-	 * ex) response로 rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 출력하는 경우 => ExcelUtil.setRecordSetSep(response, rs, ",")
+	 * ex) response로 rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 출력하는 경우 : ExcelUtil.setRecordSetSep(response, rs, ",")
 	 * 
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs 구분자(CSV, TSV 등)파일 형식으로 변환할 RecordSet 객체
@@ -109,7 +109,7 @@ public class ExcelUtil {
 	/**
 	 * RecordSet을 구분자(CSV, TSV 등)파일 형식으로 변환한다.
 	 * <br>
-	 * ex) rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 변환하는 경우 => String csv = ExcelUtil.formatSep(rs, ",")
+	 * ex) rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 변환하는 경우 : String csv = ExcelUtil.formatSep(rs, ",")
 	 * 
 	 * @param rs 변환할 RecordSet 객체
 	 * @param sep 열 구분자로 쓰일 문자열
@@ -137,7 +137,7 @@ public class ExcelUtil {
 	/**
 	 * RecordSet을 excel xml 형식으로 출력한다 (xml 헤더포함).
 	 * <br>
-	 * ex) response로 rs를 excel xml 형식으로 출력하는 경우 => ExcelUtil.setRecordSetXml(response로, rs)
+	 * ex) response로 rs를 excel xml 형식으로 출력하는 경우 : ExcelUtil.setRecordSetXml(response로, rs)
 	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs excel xml 형식으로 변환할 RecordSet 객체
@@ -178,7 +178,7 @@ public class ExcelUtil {
 	/**
 	 * RecordSet을 excel xml 형식으로 변환한다 (xml 헤더포함).
 	 * <br>
-	 * ex) rs를 excel xml 형식으로 변환하는 경우 => String excel = ExcelUtil.formatXml(rs)
+	 * ex) rs를 excel xml 형식으로 변환하는 경우 : String excel = ExcelUtil.formatXml(rs)
 	 *
 	 * @param rs excel xml 형식으로 변환할 RecordSet 객체
 	 *
@@ -192,9 +192,9 @@ public class ExcelUtil {
 	/**
 	 * RecordSet을 excel xml 형식으로 변환한다.
 	 * <br>
-	 * ex1) rs를 excel xml 형식으로 변환하는 경우 (xml 헤더포함) => String excel = ExcelUtil.formatXml(rs, true)
+	 * ex1) rs를 excel xml 형식으로 변환하는 경우 (xml 헤더포함) : String excel = ExcelUtil.formatXml(rs, true)
 	 * <br>
-	 * ex2) rs를 excel xml 형식으로 변환하는 경우 (xml 헤더미포함) => String excel = ExcelUtil.formatXml(rs, false)
+	 * ex2) rs를 excel xml 형식으로 변환하는 경우 (xml 헤더미포함) : String excel = ExcelUtil.formatXml(rs, false)
 	 *
 	 * @param rs excel xml 형식으로 변환할 RecordSet 객체
 	 * @param isHeader 헤더포함 여부
@@ -239,11 +239,11 @@ public class ExcelUtil {
 	/**
 	 * ResultSet을 엑셀 파일 형식으로 출력한다.
 	 * <br>
-	 * ex1) response로 rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 출력하는 경우 => ExcelUtil.setResultSet(response, rs, ExcelUtil.CSV)
+	 * ex1) response로 rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 출력하는 경우 : ExcelUtil.setResultSet(response, rs, ExcelUtil.CSV)
 	 * <br>
-	 * ex2) response로 rs를 열구분자 탭문자(\t) 인 구분자(CSV, TSV 등)파일 형식으로 출력하는 경우 => ExcelUtil.setResultSet(response, rs, ExcelUtil.TSV)
+	 * ex2) response로 rs를 열구분자 탭문자(\t) 인 구분자(CSV, TSV 등)파일 형식으로 출력하는 경우 : ExcelUtil.setResultSet(response, rs, ExcelUtil.TSV)
 	 * <br>
-	 * ex3) response로 rs를 excel xml 형식으로 출력하는 경우 => ExcelUtil.setResultSet(response, rs, ExcelUtil.XML)
+	 * ex3) response로 rs를 excel xml 형식으로 출력하는 경우 : ExcelUtil.setResultSet(response, rs, ExcelUtil.XML)
 	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs 엑셀 파일 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
@@ -267,7 +267,7 @@ public class ExcelUtil {
 	/**
 	 * ResultSet을 구분자(CSV, TSV 등)파일 형식으로 출력한다.
 	 * <br>
-	 * ex) response로 rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 출력하는 경우 => ExcelUtil.setResultSetSep(response, rs, ",")
+	 * ex) response로 rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 출력하는 경우 : ExcelUtil.setResultSetSep(response, rs, ",")
 	 * 
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs 구분자(CSV, TSV 등)파일 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
@@ -330,7 +330,7 @@ public class ExcelUtil {
 	/**
 	 * ResultSet을 구분자(CSV, TSV 등)파일 형식으로 변환한다.
 	 * <br>
-	 * ex) rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 변환하는 경우 => String csv = ExcelUtil.formatSep(rs, ",")
+	 * ex) rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 변환하는 경우 : String csv = ExcelUtil.formatSep(rs, ",")
 	 * 
 	 * @param rs 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * @param sep 열 구분자로 쓰일 문자열
@@ -392,7 +392,7 @@ public class ExcelUtil {
 	/**
 	 * ResultSet을 excel xml 형식으로 출력한다 (xml 헤더포함).
 	 * <br>
-	 * ex) response로 rs를 excel xml 형식으로 출력하는 경우 => ExcelUtil.setResultSetXml(response, rs)
+	 * ex) response로 rs를 excel xml 형식으로 출력하는 경우 : ExcelUtil.setResultSetXml(response, rs)
 	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs excel xml 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
@@ -465,7 +465,7 @@ public class ExcelUtil {
 	/**
 	 * ResultSet을 excel xml 형식으로 변환한다 (xml 헤더포함).
 	 * <br>
-	 * ex) rs를 excel xml 형식으로 변환하는 경우 => String excel = ExcelUtil.formatXml(rs)
+	 * ex) rs를 excel xml 형식으로 변환하는 경우 : String excel = ExcelUtil.formatXml(rs)
 	 *
 	 * @param rs excel xml 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 *
@@ -479,9 +479,9 @@ public class ExcelUtil {
 	/**
 	 * ResultSet을 excel xml 형식으로 변환한다.
 	 * <br>
-	 * ex1) rs를 excel xml 형식으로 변환하는 경우 (xml 헤더포함) => String excel = ExcelUtil.formatXml(rs, true)
+	 * ex1) rs를 excel xml 형식으로 변환하는 경우 (xml 헤더포함) : String excel = ExcelUtil.formatXml(rs, true)
 	 * <br>
-	 * ex2) rs를 excel xml 형식으로 변환하는 경우 (xml 헤더미포함) => String excel = ExcelUtil.formatXml(rs, false)
+	 * ex2) rs를 excel xml 형식으로 변환하는 경우 (xml 헤더미포함) : String excel = ExcelUtil.formatXml(rs, false)
 	 *
 	 * @param rs excel xml 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * @param isHeader 헤더포함 여부
@@ -558,7 +558,7 @@ public class ExcelUtil {
 	/**
 	 * Map객체를 구분자(CSV, TSV 등)파일 형식으로 변환한다.
 	 * <br>
-	 * ex) map을 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 변환하는 경우 => String csv = ExcelUtil.formatSep(map, ",")
+	 * ex) map을 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 변환하는 경우 : String csv = ExcelUtil.formatSep(map, ",")
 	 *
 	 * @param map 변환할 Map객체
 	 * @param sep 열 구분자로 쓰일 문자열
@@ -577,7 +577,7 @@ public class ExcelUtil {
 	/**
 	 * List객체를 구분자(CSV, TSV 등)파일 형식으로 변환한다.
 	 * <br>
-	 * ex1) mapList를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 변환하는 경우 => String csv = ExcelUtil.formatSep(mapList, ",")
+	 * ex1) mapList를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 변환하는 경우 : String csv = ExcelUtil.formatSep(mapList, ",")
 	 *
 	 * @param mapList 변환할 List객체
 	 * @param sep 열 구분자로 쓰일 문자열
@@ -602,7 +602,7 @@ public class ExcelUtil {
 	/**
 	 * Map객체를 excel xml 형식으로 변환한다 (xml 헤더포함).
 	 * <br>
-	 * ex) map을 excel xml 형식으로 변환하는 경우 => String xml = ExcelUtil.formatXml(map)
+	 * ex) map을 excel xml 형식으로 변환하는 경우 : String xml = ExcelUtil.formatXml(map)
 	 *
 	 * @param map 변환할 Map객체
 	 *
@@ -615,9 +615,9 @@ public class ExcelUtil {
 	/**
 	 * Map객체를 excel xml 형식으로 변환한다.
 	 * <br>
-	 * ex1) map을 excel xml 형식으로 변환하는 경우 (xml 헤더포함) => String xml = ExcelUtil.formatXml(map, true)
+	 * ex1) map을 excel xml 형식으로 변환하는 경우 (xml 헤더포함) : String xml = ExcelUtil.formatXml(map, true)
 	 * <br>
-	 * ex2) map을 excel xml 형식으로 변환하는 경우 (xml 헤더미포함) => String xml = ExcelUtil.formatXml(map, false)
+	 * ex2) map을 excel xml 형식으로 변환하는 경우 (xml 헤더미포함) : String xml = ExcelUtil.formatXml(map, false)
 	 *
 	 * @param map 변환할 Map객체
 	 * @param isHeader 헤더포함 여부
@@ -646,7 +646,7 @@ public class ExcelUtil {
 	/**
 	 * List객체를 excel xml 형태로 변환한다 (xml 헤더포함).
 	 * <br>
-	 * ex) mapList를 excel xml으로 변환하는 경우 => String xml = ExcelUtil.formatXml(mapList)
+	 * ex) mapList를 excel xml으로 변환하는 경우 : String xml = ExcelUtil.formatXml(mapList)
 	 *
 	 * @param mapList 변환할 List객체
 	 *
@@ -659,9 +659,9 @@ public class ExcelUtil {
 	/**
 	 * List객체를 excel xml 형태로 변환한다.
 	 * <br>
-	 * ex1) mapList를 excel xml으로 변환하는 경우 (xml 헤더포함) => String xml = ExcelUtil.formatXml(mapList, true)
+	 * ex1) mapList를 excel xml으로 변환하는 경우 (xml 헤더포함) : String xml = ExcelUtil.formatXml(mapList, true)
 	 * <br>
-	 * ex2) mapList를 excel xml으로 변환하는 경우 (xml 헤더미포함) => String xml = ExcelUtil.formatXml(mapList, false)
+	 * ex2) mapList를 excel xml으로 변환하는 경우 (xml 헤더미포함) : String xml = ExcelUtil.formatXml(mapList, false)
 	 *
 	 * @param mapList 변환할 List객체
 	 * @param isHeader 헤더포함 여부

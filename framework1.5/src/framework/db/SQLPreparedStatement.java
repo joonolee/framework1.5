@@ -69,7 +69,7 @@ public class SQLPreparedStatement extends DBStatement {
 			if (getLogger().isDebugEnabled()) {
 				StringBuilder log = new StringBuilder();
 				log.append("@Sql Start (P_STATEMENT) FetchSize : " + pstmt.getFetchSize() + " Caller : " + _caller.getClass().getName() + "\n");
-				log.append("@Sql Command => \n" + getQueryString());
+				log.append("@Sql Command : \n" + getQueryString());
 				getLogger().debug(log.toString());
 			}
 			_rs = new RecordSet(pstmt.executeQuery(), currPage, pageSize);
@@ -123,7 +123,7 @@ public class SQLPreparedStatement extends DBStatement {
 			if (getLogger().isDebugEnabled()) {
 				StringBuilder log = new StringBuilder();
 				log.append("@Sql Start (P_STATEMENT) FetchSize : " + pstmt.getFetchSize() + " Caller : " + _caller.getClass().getName() + "\n");
-				log.append("@Sql Command => \n" + getQueryString());
+				log.append("@Sql Command : \n" + getQueryString());
 				getLogger().debug(log.toString());
 			}
 			_upCnt = pstmt.executeUpdate();

@@ -40,7 +40,7 @@ public class RDUtil {
 	 * RecordSet을 RD 파일 형식으로 출력한다.
 	 * 행, 열 구분자로 디폴트 구분자를 사용한다.
 	 * <br>
-	 * ex) response로 rs를 RD 파일 형식으로 출력하는 경우 => RDUtil.setRecordSet(response, rs)
+	 * ex) response로 rs를 RD 파일 형식으로 출력하는 경우 : RDUtil.setRecordSet(response, rs)
 	 * 
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs RD 파일 형식으로 변환할 RecordSet 객체
@@ -55,7 +55,7 @@ public class RDUtil {
 	/**
 	 * RecordSet을 RD 파일 형식으로 출력한다.
 	 * <br>
-	 * ex) response로 rs를 RD 파일 형식으로 출력하는 경우 => RDUtil.setRecordSet(response, rs)
+	 * ex) response로 rs를 RD 파일 형식으로 출력하는 경우 : RDUtil.setRecordSet(response, rs)
 	 * 
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs RD 파일 형식으로 변환할 RecordSet 객체
@@ -86,7 +86,7 @@ public class RDUtil {
 	 * RecordSet을 RD 파일 형식으로 변환한다.
 	 * 행, 열 구분자로 디폴트 구분자를 사용한다.
 	 * <br>
-	 * ex) rs를 RD 파일 형식으로 변환하는 경우 => String rd = RDUtil.format(rs)
+	 * ex) rs를 RD 파일 형식으로 변환하는 경우 : String rd = RDUtil.format(rs)
 	 * 
 	 * @param rs 변환할 RecordSet 객체
 	 * 
@@ -100,7 +100,7 @@ public class RDUtil {
 	/**
 	 * RecordSet을 RD 파일 형식으로 변환한다.
 	 * <br>
-	 * ex) rs를 열구분자 ##, 행구분자 !! 인 RD 파일 형식으로 변환하는 경우 => String rd = RDUtil.format(rs, "##", "!!")
+	 * ex) rs를 열구분자 ##, 행구분자 !! 인 RD 파일 형식으로 변환하는 경우 : String rd = RDUtil.format(rs, "##", "!!")
 	 * 
 	 * @param rs 변환할 RecordSet 객체
 	 * @param colSep 열 구분자로 쓰일 문자열
@@ -132,7 +132,7 @@ public class RDUtil {
 	 * ResultSet을 RD 파일 형식으로 출력한다.
 	 * 행, 열 구분자로 디폴트 구분자를 사용한다.
 	 * <br>
-	 * ex) response로 rs를 RD 파일 형식으로 출력하는 경우 => RDUtil.setResultSet(response, rs)
+	 * ex) response로 rs를 RD 파일 형식으로 출력하는 경우 : RDUtil.setResultSet(response, rs)
 	 * 
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs RD 파일 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
@@ -147,7 +147,7 @@ public class RDUtil {
 	/**
 	 * ResultSet을 RD 파일 형식으로 출력한다.
 	 * <br>
-	 * ex) response로 rs를 RD 파일 형식으로 출력하는 경우 => RDUtil.setResultSet(response, rs)
+	 * ex) response로 rs를 RD 파일 형식으로 출력하는 경우 : RDUtil.setResultSet(response, rs)
 	 * 
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs RD 파일 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
@@ -212,7 +212,7 @@ public class RDUtil {
 	 * ResultSet을 RD 파일 형식으로 변환한다.
 	 * 행, 열 구분자로 디폴트 구분자를 사용한다.
 	 * <br>
-	 * ex) rs를 RD 파일 형식으로 변환하는 경우 => String rd = RDUtil.format(rs)
+	 * ex) rs를 RD 파일 형식으로 변환하는 경우 : String rd = RDUtil.format(rs)
 	 * 
 	 * @param rs 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * 
@@ -226,7 +226,7 @@ public class RDUtil {
 	/**
 	 * ResultSet을 RD 파일 형식으로 변환한다.
 	 * <br>
-	 * ex) rs를 열구분자 ##, 행구분자 !! 인 RD 파일 형식으로 변환하는 경우 => String rd = RDUtil.format(rs, "##", "!!")
+	 * ex) rs를 열구분자 ##, 행구분자 !! 인 RD 파일 형식으로 변환하는 경우 : String rd = RDUtil.format(rs, "##", "!!")
 	 * 
 	 * @param rs 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * @param colSep 열 구분자로 쓰일 문자열
@@ -292,7 +292,7 @@ public class RDUtil {
 	 * Map객체를 RD 파일 형식으로 변환한다.
 	 * 열 구분자로 디폴트 구분자를 사용한다.
 	 * <br>
-	 * ex) map을 RD 파일 형식으로 변환하는 경우 => String rd = RDUtil.format(map)
+	 * ex) map을 RD 파일 형식으로 변환하는 경우 : String rd = RDUtil.format(map)
 	 *
 	 * @param map 변환할 Map객체
 	 *
@@ -305,7 +305,7 @@ public class RDUtil {
 	/**
 	 * Map객체를 RD 파일 형식으로 변환한다.
 	 * <br>
-	 * ex) map을 열구분자 ## 인 RD 파일 형식으로 변환하는 경우 => String rd = RDUtil.format(map, "##")
+	 * ex) map을 열구분자 ## 인 RD 파일 형식으로 변환하는 경우 : String rd = RDUtil.format(map, "##")
 	 *
 	 * @param map 변환할 Map객체
 	 * @param colSep 열 구분자로 쓰일 문자열
@@ -325,7 +325,7 @@ public class RDUtil {
 	 * List객체를 RD 파일 형식으로 변환한다.
 	 * 행, 열 구분자로 디폴트 구분자를 사용한다.
 	 * <br>
-	 * ex1) mapList를 RD 파일 형식으로 변환하는 경우 => String rd = RDUtil.format(mapList)
+	 * ex1) mapList를 RD 파일 형식으로 변환하는 경우 : String rd = RDUtil.format(mapList)
 	 *
 	 * @param mapList 변환할 List객체
 	 *
@@ -338,7 +338,7 @@ public class RDUtil {
 	/**
 	 * List객체를 RD 파일 형식으로 변환한다.
 	 * <br>
-	 * ex1) mapList를 열구분자 ##, 행구분자 !! 인 RD 파일 형식으로 변환하는 경우 => String rd = RDUtil.format(mapList, "##", "!!")
+	 * ex1) mapList를 열구분자 ##, 행구분자 !! 인 RD 파일 형식으로 변환하는 경우 : String rd = RDUtil.format(mapList, "##", "!!")
 	 *
 	 * @param mapList 변환할 List객체
 	 * @param colSep 열 구분자로 쓰일 문자열

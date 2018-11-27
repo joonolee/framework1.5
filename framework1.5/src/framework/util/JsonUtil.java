@@ -29,7 +29,7 @@ public class JsonUtil {
 	/**
 	 * RecordSet을 JSON 형식으로 출력한다.
 	 * <br>
-	 * ex) response로 rs를 JSON 형식으로 출력하는 경우 => JsonUtil.setRecordSet(response, rs)
+	 * ex) response로 rs를 JSON 형식으로 출력하는 경우 : JsonUtil.setRecordSet(response, rs)
 	 * 
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs JSON 형식으로 변환할 RecordSet 객체
@@ -60,7 +60,7 @@ public class JsonUtil {
 	/**
 	 * RecordSet을 Json 배열 형태로 변환한다.
 	 * <br>
-	 * ex) rs를 JSON 형식으로 변환하는 경우 => String json = JsonUtil.format(rs)
+	 * ex) rs를 JSON 형식으로 변환하는 경우 : String json = JsonUtil.format(rs)
 	 * 
 	 * @param rs JSON 형식으로 변환할 RecordSet 객체
 	 * 
@@ -92,7 +92,7 @@ public class JsonUtil {
 	/**
 	 * ResultSet을 JSON 형식으로 출력한다.
 	 * <br>
-	 * ex) response로 rs를 JSON 형식으로 출력하는 경우 => JsonUtil.setResultSet(response, rs)
+	 * ex) response로 rs를 JSON 형식으로 출력하는 경우 : JsonUtil.setResultSet(response, rs)
 	 * 
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs JSON 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
@@ -156,7 +156,7 @@ public class JsonUtil {
 	/**
 	 * ResultSet을 Json 배열 형태로 변환한다.
 	 * <br>
-	 * ex) rs를 JSON 형식으로 변환하는 경우 => String json = JsonUtil.format(rs)
+	 * ex) rs를 JSON 형식으로 변환하는 경우 : String json = JsonUtil.format(rs)
 	 * 
 	 * @param rs JSON 형식으로 변환할 ResultSet 객체
 	 * 
@@ -221,7 +221,7 @@ public class JsonUtil {
 	/**
 	 * Map객체를 JSON 형식으로 변환한다.
 	 * <br>
-	 * ex) map을 JSON 형식으로 변환하는 경우 => String json = JsonUtil.format(map)
+	 * ex) map을 JSON 형식으로 변환하는 경우 : String json = JsonUtil.format(map)
 	 *
 	 * @param map 변환할 Map객체
 	 *
@@ -239,7 +239,7 @@ public class JsonUtil {
 	/**
 	 * List객체를 JSON 형식으로 변환한다.
 	 * <br>
-	 * ex1) mapList를 JSON 형식으로 변환하는 경우 => String json = JsonUtil.format(mapList)
+	 * ex1) mapList를 JSON 형식으로 변환하는 경우 : String json = JsonUtil.format(mapList)
 	 *
 	 * @param mapList 변환할 List객체
 	 *

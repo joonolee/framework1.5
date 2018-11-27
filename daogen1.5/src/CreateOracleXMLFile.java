@@ -1,5 +1,6 @@
+
 /*
- * @(#)CreateXMLFile.java
+ * @(#)CreateOracleXMLFile.java
  * DAO, VO 생성에 필요한 메타정보 xml 파일을 추출
  */
 import java.io.BufferedWriter;
@@ -17,52 +18,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class CreateOracleXMLFile {
-	private static final String _jdbcDriver = "oracle.jdbc.driver.OracleDriver";
-	private static final String _jdbcUrl = "jdbc:oracle:thin:@192.1.1.68:1521:TESTDB";
-	private static final String _jdbcUid = "socusr";
-	private static final String _jdbcPw = "socusr#testdb";
-	private static List<String> _tableNameList = Arrays.asList(
-			"TBL_SUBMIT_QUEUE",
-			"T_AUDITLOG",
-			"T_AUDITLOG_XML",
-			"T_AUDITTYPECODE",
-			"T_BATCHLOG",
-			"T_EMAILLOG",
-			"T_EMAILSEND",
-			"T_EMAILSENDDETAIL",
-			"T_JOBCODE",
-			"T_JOBLOG",
-			"T_KRC_DEPT",
-			"T_LOGIN_HIS",
-			"T_MENUCODE",
-			"T_MENUGROUP",
-			"T_MENUGROUPALLOC",
-			"T_MENUGROUPAUTH",
-			"T_MENUUSERAUTH",
-			"T_ORGCLSCODE",
-			"T_ORGCODE",
-			"T_PGLOG",
-			"T_PGLOG_XML",
-			"T_POSTCODE",
-			"T_POSTCODE_DORO",
-			"T_POSTCODE_SIDO",
-			"T_SMBIZADMIN",
-			"T_SMSSEND",
-			"T_SMSSENDDETAIL",
-			"T_SOC_AGREEMENT",
-			"T_SOC_AGREEMENTCODE",
-			"T_SOC_BANKACCOUNT",
-			"T_SOC_BIZTYPECODE",
-			"T_SOC_DONATION",
-			"T_SOC_DONATIONCODE",
-			"T_SOC_MEETING",
-			"T_SOC_MEMBER",
-			"T_SOC_MEMCLSCODE",
-			"T_SOC_VISIT",
-			"T_SOURCE_HIS",
-			"T_USER",
-			"T_USERSTATECODE"
-	);
+	private static final String _jdbcDriver = "";
+	private static final String _jdbcUrl = "";
+	private static final String _jdbcUid = "";
+	private static final String _jdbcPw = "";
+	private static List<String> _tableNameList = Arrays.asList();
 	private static String _filePath = "xml";
 
 	public static void main(String[] args) throws Exception {

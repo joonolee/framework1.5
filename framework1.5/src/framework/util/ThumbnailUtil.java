@@ -47,7 +47,7 @@ public class ThumbnailUtil {
 		try {
 			// 이미지 파일 불러옴
 			Image inImage = new ImageIcon(srcFileName).getImage();
-			
+
 			// 이미지 스케일 설정 : maxWidth 기준으로 비율을 계산함(가로/세로 또는 세로/가로. 큰 사이즈의 길이값이 분모로서 계산된다)
 			double scale = ThumbnailUtil.getScale(standardWidth, standardHeight, inImage.getWidth(null), inImage.getHeight(null));
 			// 위에서 추출한 스케일을 기준으로 width, height를 설정함.
@@ -93,11 +93,11 @@ public class ThumbnailUtil {
 			}
 		}
 	}
-	
+
 	private static double getScale(int standardWidth, int standardHeight, int imageWidth, int imageHeight) {
 		double widthScale = (double) standardWidth / imageWidth;
 		double heightScale = (double) standardHeight / (double) imageHeight;
-		
+
 		if (widthScale > heightScale) {
 			return heightScale;
 		} else {

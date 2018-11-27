@@ -181,7 +181,6 @@ public class FileUtil {
 	 * 이미지 데이터를 stream 으로 전달하는 메소드
 	 * 
 	 * @param response
-	 * @param displayName
 	 * @param file
 	 */
 	public static void displayImage(HttpServletResponse response, File file) {
@@ -200,7 +199,6 @@ public class FileUtil {
 	 * 비디오 데이터를 stream 으로 전달하는 메소드
 	 * 
 	 * @param response
-	 * @param displayName
 	 * @param file
 	 */
 	public static void displayVideo(HttpServletResponse response, File file) {

@@ -1,5 +1,6 @@
+
 /*
- * @(#)CreateXMLFile.java
+ * @(#)CreateMSSqlXMLFile.java
  * DAO, VO 생성에 필요한 메타정보 xml 파일을 추출
  */
 import java.io.BufferedWriter;
@@ -17,18 +18,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class CreateMSSqlXMLFile {
-	private static final String _jdbcDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-	private static final String _jdbcUrl = "jdbc:sqlserver://JHLEE-PC2\\SQL2005:49342;databaseName=SKI";
-	private static final String _jdbcUid = "sa";
-	private static final String _jdbcPw = "chlgPwjd";
-	private static List<String> _tableNameList = Arrays.asList(
-			"DUTY_CODE",
-			"MEETING_CODE",
-			"MEMBER",
-			"ORGAN_CODE",
-			"POST_CODE",
-			"GYOGU_CODE"
-	);
+	private static final String _jdbcDriver = "";
+	private static final String _jdbcUrl = "";
+	private static final String _jdbcUid = "";
+	private static final String _jdbcPw = "";
+	private static List<String> _tableNameList = Arrays.asList();
 	private static String _filePath = "xml";
 
 	public static void main(String[] args) throws Exception {

@@ -272,6 +272,8 @@ public class RecordSet implements Iterable<Map<String, Object>>, Serializable {
 
 	/**
 	 * 해당하는 하는 row로 이동
+	 * @param row
+	 * @return
 	 */
 	public boolean moveRow(int row) {
 		if (_rows != null && _rows.size() != 0 && row <= _rows.size()) {
@@ -286,6 +288,7 @@ public class RecordSet implements Iterable<Map<String, Object>>, Serializable {
 	 * 
 	 * @param row cnt : start 1
 	 * @param column name
+	 * @return
 	 */
 	public Object get(int row, String column) {
 		return _rows.get(row - 1).get(column.toUpperCase());
