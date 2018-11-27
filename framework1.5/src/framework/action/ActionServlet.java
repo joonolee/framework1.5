@@ -99,7 +99,7 @@ public class ActionServlet extends HttpServlet {
 		processRequest(request, response);
 	}
 
-	private void processRequest(HttpServletRequest request, HttpServletResponse response) {
+	private void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String actionKey = getActionKey(request);
 		if (actionKey == null) {
 			getLogger().error("ActionKey are null!");
@@ -108,7 +108,7 @@ public class ActionServlet extends HttpServlet {
 		String actionClassName = getActionClass(actionKey);
 		Action action = null;
 		if (actionClassName == null) {
-			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+			response.sendError(404);
 		} else {
 			try {
 				Class<?> actionClass = Class.forName(actionClassName);

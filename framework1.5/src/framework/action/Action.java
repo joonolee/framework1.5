@@ -46,8 +46,9 @@ public abstract class Action {
 	 * @param servlet 서블릿 객체
 	 * @param request 클라이언트에서 요청된 Request객체
 	 * @param response 클라이언트로 응답할 Response객체
+	 * @throws IOException 
 	 */
-	public void execute(HttpServlet servlet, HttpServletRequest request, HttpServletResponse response) {
+	public void execute(HttpServlet servlet, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		setServlet(servlet);
 		setRequest(request);
 		setResponse(response);
@@ -55,7 +56,7 @@ public abstract class Action {
 			Method method = getMethod(request.getParameter("action"));
 			method.invoke(this, (Object[]) null);
 		} catch (Exception e) {
-			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+			response.sendError(500);
 			getLogger().error("Action execute Error!", e);
 		} finally {
 			destroy();
