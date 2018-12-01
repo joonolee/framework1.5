@@ -55,8 +55,8 @@ public class MiPlatformUtil {
 	 * @param rs 마이플랫폼 데이타셋으로 변환할 RecordSet 객체
 	 * @param dataFormat 송수신 형식 (MiPlatformUtil.BIN, MiPlatformUtil.ZLIB_COMP, MiPlatformUtil.XML)
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSet(HttpServletResponse response, String datasetName, RecordSet rs, int dataFormat) throws ColumnNotFoundException, IOException {
 		return setRecordSet(response, new String[] { datasetName }, new RecordSet[] { rs }, dataFormat);
@@ -72,8 +72,8 @@ public class MiPlatformUtil {
 	 * @param rsArray 마이플랫폼 데이타셋으로 변환할 RecordSet 객체 배열
 	 * @param dataFormat 송수신 형식 (MiPlatformUtil.BIN, MiPlatformUtil.ZLIB_COMP, MiPlatformUtil.XML)
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSet(HttpServletResponse response, String[] datasetNameArray, RecordSet[] rsArray, int dataFormat) throws ColumnNotFoundException, IOException {
 		if (datasetNameArray.length != rsArray.length)
@@ -107,7 +107,7 @@ public class MiPlatformUtil {
 	 * @param dSet 출력용 마이플랫폼 데이타셋 객체
 	 * @param rs 마이플랫폼 데이타셋으로 변환할 RecordSet 객체
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
 	 */
 	public static int appendDataset(Dataset dSet, RecordSet rs) throws ColumnNotFoundException {
 		if (rs == null) {
@@ -146,8 +146,8 @@ public class MiPlatformUtil {
 	 * @param rs 마이플랫폼 데이타셋으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * @param dataFormat 송수신 형식 (MiPlatformUtil.BIN, MiPlatformUtil.ZLIB_COMP, MiPlatformUtil.XML)
 	 * @return 처리건수
-	 * @throws IOException 
-	 * @throws SQLException 
+	 * @throws IOException IOException
+	 * @throws SQLException SQLException
 	 */
 	public static int setResultSet(HttpServletResponse response, String datasetName, ResultSet rs, int dataFormat) throws IOException, SQLException {
 		return setResultSet(response, new String[] { datasetName }, new ResultSet[] { rs }, dataFormat);
@@ -163,8 +163,8 @@ public class MiPlatformUtil {
 	 * @param rsArray 마이플랫폼 데이타셋으로 변환할 ResultSet 객체 배열, ResultSet 객체는 자동으로 close 된다.
 	 * @param dataFormat 송수신 형식 (MiPlatformUtil.BIN, MiPlatformUtil.ZLIB_COMP, MiPlatformUtil.XML)
 	 * @return 처리건수
-	 * @throws IOException 
-	 * @throws SQLException 
+	 * @throws IOException IOException
+	 * @throws SQLException SQLException
 	 */
 	public static int setResultSet(HttpServletResponse response, String[] datasetNameArray, ResultSet[] rsArray, int dataFormat) throws IOException, SQLException {
 		if (datasetNameArray.length != rsArray.length)
@@ -198,7 +198,7 @@ public class MiPlatformUtil {
 	 * @param dSet 출력용 마이플랫폼 데이타셋 객체
 	 * @param rs 마이플랫폼 데이타셋으로 변환할 ResultSet 객체
 	 * @return 처리건수
-	 * @throws SQLException 
+	 * @throws SQLException SQLException
 	 */
 	public static int appendDataset(Dataset dSet, ResultSet rs) throws SQLException {
 		if (rs == null) {
@@ -255,7 +255,7 @@ public class MiPlatformUtil {
 	 * 
 	 * @param request 클라이언트에서 요청된 Request 객체
 	 * @return 요청객체에서 구한 PlatformRequest 객체
-	 * @throws IOException 
+	 * @throws IOException IOException
 	 */
 	public static PlatformRequest getPReq(HttpServletRequest request) throws IOException {
 		PlatformRequest inputPR = null;
@@ -272,7 +272,7 @@ public class MiPlatformUtil {
 	 * @param request 클라이언트에서 요청된 Request 객체
 	 * @param encoding 인코딩할 형식
 	 * @return 요청객체에서 구한 PlatformRequest 객체
-	 * @throws IOException 
+	 * @throws IOException IOException
 	 */
 	public static PlatformRequest getPReq(HttpServletRequest request, String encoding) throws IOException {
 		PlatformRequest inputPR = null;
@@ -289,7 +289,7 @@ public class MiPlatformUtil {
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param dataFormat 송수신 형식 (MiPlatformUtil.BIN, MiPlatformUtil.ZLIB_COMP, MiPlatformUtil.XML)
 	 * @return 응답객체에서 구한 PlatformResponse 객체
-	 * @throws IOException 
+	 * @throws IOException IOException
 	 */
 	public static PlatformResponse getPRes(HttpServletResponse response, int dataFormat) throws IOException {
 		PlatformResponse inputPRes = null;
@@ -306,7 +306,7 @@ public class MiPlatformUtil {
 	 * @param dataFormat 송수신 형식 (MiPlatformUtil.BIN, MiPlatformUtil.ZLIB_COMP, MiPlatformUtil.XML)
 	 * @param encoding 인코딩할 형식
 	 * @return 응답객체에서 구한 PlatformResponse 객체
-	 * @throws IOException 
+	 * @throws IOException IOException
 	 */
 	public static PlatformResponse getPRes(HttpServletResponse response, int dataFormat, String encoding) throws IOException {
 		PlatformResponse inputPRes = null;
@@ -343,7 +343,7 @@ public class MiPlatformUtil {
 	 * @param vl 마이플랫폼 VariableList 객체
 	 * @param dl 마이플랫폼 DatasetList 객체
 	 * @param dataFormat 송수신 형식 (MiPlatformUtil.BIN, MiPlatformUtil.ZLIB_COMP, MiPlatformUtil.XML)
-	 * @throws IOException 
+	 * @throws IOException IOException
 	 */
 	public static void sendData(HttpServletResponse response, VariableList vl, DatasetList dl, int dataFormat) throws IOException {
 		PlatformResponse pResponse = getPRes(response, dataFormat);

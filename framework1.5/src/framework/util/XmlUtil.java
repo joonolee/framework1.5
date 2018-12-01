@@ -36,8 +36,8 @@ public class XmlUtil {
 	 * @param encoding 헤더에 포함될 인코딩
 	 * 
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSet(HttpServletResponse response, RecordSet rs, String encoding) throws ColumnNotFoundException, IOException {
 		if (rs == null) {
@@ -66,7 +66,7 @@ public class XmlUtil {
 	 * @param rs xml 형식으로 변환할 RecordSet 객체
 	 *
 	 * @return xml 형식으로 변환된 문자열
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
 	 */
 	public static String format(RecordSet rs) throws ColumnNotFoundException {
 		if (rs == null) {
@@ -93,7 +93,7 @@ public class XmlUtil {
 	 * @param encoding 헤더에 포함될 인코딩
 	 *
 	 * @return xml 형식으로 변환된 문자열
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
 	 */
 	public static String format(RecordSet rs, String encoding) throws ColumnNotFoundException {
 		if (rs == null) {
@@ -117,8 +117,8 @@ public class XmlUtil {
 	 * @param encoding 헤더에 포함될 인코딩
 	 * 
 	 * @return 처리건수
-	 * @throws SQLException 
-	 * @throws IOException 
+	 * @throws SQLException SQLException
+	 * @throws IOException IOException
 	 */
 	public static int setResultSet(HttpServletResponse response, ResultSet rs, String encoding) throws SQLException, IOException {
 		if (rs == null) {
@@ -178,7 +178,8 @@ public class XmlUtil {
 	 * ex) rs를 xml 형식으로 변환하는 경우 : String xml = XmlUtil.format(rs)
 	 *
 	 * @param rs xml 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
-	 * @throws SQLException 
+	 * @throws SQLException SQLException
+	 * @return xml 형식 문자열
 	 */
 	public static String format(ResultSet rs) throws SQLException {
 		if (rs == null) {
@@ -236,8 +237,8 @@ public class XmlUtil {
 	 *
 	 * @param rs xml 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * @param encoding 헤더에 포함될 인코딩
-	 * 
-	 * @throws SQLException 
+	 * @throws SQLException SQLException
+	 * @return xml 형식 문자열
 	 */
 	public static String format(ResultSet rs, String encoding) throws SQLException {
 		if (rs == null) {

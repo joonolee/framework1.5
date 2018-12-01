@@ -62,8 +62,8 @@ public class ExcelUtil {
 	 * @param rs 엑셀 파일 형식으로 변환할 RecordSet 객체
 	 * @param ft 파일타입 (CSV, TSV, XML)
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSet(HttpServletResponse response, RecordSet rs, FileType ft) throws ColumnNotFoundException, IOException {
 		switch (ft) {
@@ -86,8 +86,8 @@ public class ExcelUtil {
 	 * @param rs 구분자(CSV, TSV 등)파일 형식으로 변환할 RecordSet 객체
 	 * @param sep 열 구분자로 쓰일 문자열
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSetSep(HttpServletResponse response, RecordSet rs, String sep) throws ColumnNotFoundException, IOException {
 		if (rs == null) {
@@ -115,7 +115,7 @@ public class ExcelUtil {
 	 * @param sep 열 구분자로 쓰일 문자열
 	 * 
 	 * @return 구분자(CSV, TSV 등)파일 형식으로 변환된 문자열
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
 	 */
 	public static String formatSep(RecordSet rs, String sep) throws ColumnNotFoundException {
 		if (rs == null) {
@@ -142,8 +142,8 @@ public class ExcelUtil {
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs excel xml 형식으로 변환할 RecordSet 객체
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSetXml(HttpServletResponse response, RecordSet rs) throws ColumnNotFoundException, IOException {
 		if (rs == null) {
@@ -183,7 +183,7 @@ public class ExcelUtil {
 	 * @param rs excel xml 형식으로 변환할 RecordSet 객체
 	 *
 	 * @return excel xml형식으로 변환된 문자열
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
 	 */
 	public static String formatXml(RecordSet rs) throws ColumnNotFoundException {
 		return formatXml(rs, true);
@@ -200,7 +200,7 @@ public class ExcelUtil {
 	 * @param isHeader 헤더포함 여부
 	 *
 	 * @return excel xml 형식으로 변환된 문자열
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
 	 */
 	public static String formatXml(RecordSet rs, boolean isHeader) throws ColumnNotFoundException {
 		if (rs == null) {
@@ -249,8 +249,8 @@ public class ExcelUtil {
 	 * @param rs 엑셀 파일 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * @param ft 파일타입 (CSV, TSV, XML)
 	 * @return 처리건수
-	 * @throws SQLException 
-	 * @throws IOException 
+	 * @throws SQLException SQLException
+	 * @throws IOException IOException
 	 */
 	public static int setResultSet(HttpServletResponse response, ResultSet rs, FileType ft) throws SQLException, IOException {
 		switch (ft) {
@@ -273,8 +273,8 @@ public class ExcelUtil {
 	 * @param rs 구분자(CSV, TSV 등)파일 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * @param sep 열 구분자로 쓰일 문자열
 	 * @return 처리건수
-	 * @throws SQLException 
-	 * @throws IOException 
+	 * @throws SQLException SQLException
+	 * @throws IOException IOException
 	 */
 	public static int setResultSetSep(HttpServletResponse response, ResultSet rs, String sep) throws SQLException, IOException {
 		if (rs == null) {
@@ -336,7 +336,7 @@ public class ExcelUtil {
 	 * @param sep 열 구분자로 쓰일 문자열
 	 * 
 	 * @return 구분자(CSV, TSV 등)파일 형식으로 변환된 문자열
-	 * @throws SQLException 
+	 * @throws SQLException SQLException
 	 */
 	public static String formatSep(ResultSet rs, String sep) throws SQLException {
 		if (rs == null) {
@@ -397,8 +397,8 @@ public class ExcelUtil {
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs excel xml 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * @return 처리건수
-	 * @throws SQLException 
-	 * @throws IOException 
+	 * @throws SQLException SQLException
+	 * @throws IOException IOException
 	 */
 	public static int setResultSetXml(HttpServletResponse response, ResultSet rs) throws SQLException, IOException {
 		if (rs == null) {
@@ -470,7 +470,7 @@ public class ExcelUtil {
 	 * @param rs excel xml 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 *
 	 * @return excel xml형식으로 변환된 문자열
-	 * @throws SQLException 
+	 * @throws SQLException SQLException
 	 */
 	public static String formatXml(ResultSet rs) throws SQLException {
 		return formatXml(rs, true);
@@ -487,7 +487,7 @@ public class ExcelUtil {
 	 * @param isHeader 헤더포함 여부
 	 *
 	 * @return excel xml 형식으로 변환된 문자열
-	 * @throws SQLException 
+	 * @throws SQLException SQLException
 	 */
 	public static String formatXml(ResultSet rs, boolean isHeader) throws SQLException {
 		if (rs == null) {
@@ -704,6 +704,7 @@ public class ExcelUtil {
 	 * 
 	 * @param str 변환할 문자열
 	 * @param sep 열 구분자로 쓰일 문자열
+	 * @return escape 된 문자열
 	 */
 	public static String escapeSep(String str, String sep) {
 		if (str == null) {

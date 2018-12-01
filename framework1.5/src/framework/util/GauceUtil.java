@@ -39,8 +39,8 @@ public class GauceUtil {
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs 가우스 데이타셋으로 변환할 RecordSet 객체
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSet(HttpServletResponse response, RecordSet rs) throws ColumnNotFoundException, IOException {
 		return setRecordSet(response, "", rs);
@@ -55,8 +55,8 @@ public class GauceUtil {
 	 * @param datasetName 데이타셋 이름
 	 * @param rs 가우스 데이타셋으로 변환할 RecordSet 객체
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSet(HttpServletResponse response, String datasetName, RecordSet rs) throws ColumnNotFoundException, IOException {
 		return setRecordSet(response, new String[] { datasetName }, new RecordSet[] { rs });
@@ -71,8 +71,8 @@ public class GauceUtil {
 	 * @param datasetNameArray 데이타셋 이름 배열
 	 * @param rsArray 가우스 데이타셋으로 변환할 RecordSet 객체 배열
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSet(HttpServletResponse response, String[] datasetNameArray, RecordSet[] rsArray) throws ColumnNotFoundException, IOException {
 		if (datasetNameArray.length != rsArray.length)
@@ -97,8 +97,8 @@ public class GauceUtil {
 	 * @param dSet 데이타셋
 	 * @param rs 가우스 데이타셋으로 변환할 RecordSet 객체
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSet(HttpServletResponse response, GauceDataSet dSet, RecordSet rs) throws ColumnNotFoundException, IOException {
 		return setRecordSet(response, new GauceDataSet[] { dSet }, new RecordSet[] { rs });
@@ -113,8 +113,8 @@ public class GauceUtil {
 	 * @param dSetArray 데이타셋 배열
 	 * @param rsArray 가우스 데이타셋으로 변환할 RecordSet 객체 배열
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSet(HttpServletResponse response, GauceDataSet[] dSetArray, RecordSet[] rsArray) throws ColumnNotFoundException, IOException {
 		if (dSetArray.length != rsArray.length)
@@ -138,7 +138,7 @@ public class GauceUtil {
 	 * @param dSet 출력용 가우스 데이타셋 객체
 	 * @param rs 가우스 데이타셋으로 변환할 RecordSet 객체
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
 	 */
 	public static int appendDataSet(GauceDataSet dSet, RecordSet rs) throws ColumnNotFoundException {
 		if (rs == null) {
@@ -167,8 +167,8 @@ public class GauceUtil {
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs 가우스 데이타셋으로 변환할 RecordSet 객체
 	 * @return 처리건수
-	 * @throws IOException 
-	 * @throws SQLException
+	 * @throws IOException IOException
+	 * @throws SQLException SQLException
 	 */
 	public static int setResultSet(HttpServletResponse response, ResultSet rs) throws IOException, SQLException {
 		return setResultSet(response, "", rs);
@@ -183,8 +183,8 @@ public class GauceUtil {
 	 * @param datasetName 데이타셋 이름
 	 * @param rs 가우스 데이타셋으로 변환할 RecordSet 객체
 	 * @return 처리건수
-	 * @throws IOException 
-	 * @throws SQLException
+	 * @throws IOException IOException
+	 * @throws SQLException SQLException
 	 */
 	public static int setResultSet(HttpServletResponse response, String datasetName, ResultSet rs) throws IOException, SQLException {
 		return setResultSet(response, new String[] { datasetName }, new ResultSet[] { rs });
@@ -199,8 +199,8 @@ public class GauceUtil {
 	 * @param datasetNameArray 데이타셋 이름 배열
 	 * @param rsArray 가우스 데이타셋으로 변환할 ResultSet 객체 배열, ResultSet 객체는 자동으로 close 된다.
 	 * @return 처리건수
-	 * @throws IOException 
-	 * @throws SQLException 
+	 * @throws IOException IOException
+	 * @throws SQLException SQLException
 	 */
 	public static int setResultSet(HttpServletResponse response, String[] datasetNameArray, ResultSet[] rsArray) throws IOException, SQLException {
 		if (datasetNameArray.length != rsArray.length)
@@ -225,8 +225,8 @@ public class GauceUtil {
 	 * @param dSet 데이타셋
 	 * @param rs 가우스 데이타셋으로 변환할 RecordSet 객체
 	 * @return 처리건수
-	 * @throws IOException 
-	 * @throws SQLException
+	 * @throws IOException IOException
+	 * @throws SQLException SQLException
 	 */
 	public static int setResultSet(HttpServletResponse response, GauceDataSet dSet, ResultSet rs) throws IOException, SQLException {
 		return setResultSet(response, new GauceDataSet[] { dSet }, new ResultSet[] { rs });
@@ -241,8 +241,8 @@ public class GauceUtil {
 	 * @param dSetArray 데이타셋 이름 배열
 	 * @param rsArray 가우스 데이타셋으로 변환할 ResultSet 객체 배열, ResultSet 객체는 자동으로 close 된다.
 	 * @return 처리건수
-	 * @throws IOException 
-	 * @throws SQLException 
+	 * @throws IOException IOException
+	 * @throws SQLException SQLException
 	 */
 	public static int setResultSet(HttpServletResponse response, GauceDataSet[] dSetArray, ResultSet[] rsArray) throws IOException, SQLException {
 		if (dSetArray.length != rsArray.length)
@@ -266,7 +266,7 @@ public class GauceUtil {
 	 * @param dSet 출력용 가우스데이타셋 객체
 	 * @param rs 가우스 데이타셋으로 변환할 ResultSet 객체
 	 * @return 처리건수
-	 * @throws SQLException 
+	 * @throws SQLException SQLException
 	 */
 	public static int appendDataSet(GauceDataSet dSet, ResultSet rs) throws SQLException {
 		if (rs == null) {
@@ -317,7 +317,7 @@ public class GauceUtil {
 	 * @param request 클라이언트에서 요청된 Request 객체
 	 * 
 	 * @return 요청객체에서 구한 GauceInputStream 객체
-	 * @throws IOException 
+	 * @throws IOException IOException
 	 */
 	public static GauceInputStream getGIS(HttpServletRequest request) throws IOException {
 		GauceInputStream inputGis = null;
@@ -333,7 +333,7 @@ public class GauceUtil {
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * 
 	 * @return 응답객체에서 구한 GauceOutputStream 객체
-	 * @throws IOException 
+	 * @throws IOException IOException
 	 */
 	public static GauceOutputStream getGOS(HttpServletResponse response) throws IOException {
 		GauceOutputStream inputGos = null;

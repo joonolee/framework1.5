@@ -45,8 +45,8 @@ public class RDUtil {
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs RD 파일 형식으로 변환할 RecordSet 객체
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSet(HttpServletResponse response, RecordSet rs) throws ColumnNotFoundException, IOException {
 		return setRecordSet(response, rs, DEFAULT_COLSEP, DEFAULT_LINESEP);
@@ -62,8 +62,8 @@ public class RDUtil {
 	 * @param colSep 열 구분자로 쓰일 문자열
 	 * @param lineSep 행 구분자로 쓰일 문자열
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSet(HttpServletResponse response, RecordSet rs, String colSep, String lineSep) throws ColumnNotFoundException, IOException {
 		if (rs == null) {
@@ -91,7 +91,7 @@ public class RDUtil {
 	 * @param rs 변환할 RecordSet 객체
 	 * 
 	 * @return RD 파일 형식으로 변환된 문자열
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
 	 */
 	public static String format(RecordSet rs) throws ColumnNotFoundException {
 		return format(rs, DEFAULT_COLSEP, DEFAULT_LINESEP);
@@ -105,9 +105,8 @@ public class RDUtil {
 	 * @param rs 변환할 RecordSet 객체
 	 * @param colSep 열 구분자로 쓰일 문자열
 	 * @param lineSep 행 구분자로 쓰일 문자열
-	 * 
 	 * @return RD 파일 형식으로 변환된 문자열
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
 	 */
 	public static String format(RecordSet rs, String colSep, String lineSep) throws ColumnNotFoundException {
 		if (rs == null) {
@@ -137,8 +136,8 @@ public class RDUtil {
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs RD 파일 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * @return 처리건수 
-	 * @throws SQLException 
-	 * @throws IOException 
+	 * @throws SQLException SQLException
+	 * @throws IOException IOException
 	 */
 	public static int setResultSet(HttpServletResponse response, ResultSet rs) throws SQLException, IOException {
 		return setResultSet(response, rs, DEFAULT_COLSEP, DEFAULT_LINESEP);
@@ -154,8 +153,8 @@ public class RDUtil {
 	 * @param colSep 열 구분자로 쓰일 문자열
 	 * @param lineSep 행 구분자로 쓰일 문자열
 	 * @return 처리건수
-	 * @throws SQLException 
-	 * @throws IOException 
+	 * @throws SQLException SQLException
+	 * @throws IOException IOException
 	 */
 	public static int setResultSet(HttpServletResponse response, ResultSet rs, String colSep, String lineSep) throws SQLException, IOException {
 		if (rs == null) {
@@ -217,7 +216,7 @@ public class RDUtil {
 	 * @param rs 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * 
 	 * @return RD 파일 형식으로 변환된 문자열
-	 * @throws SQLException 
+	 * @throws SQLException SQLException
 	 */
 	public static String format(ResultSet rs) throws SQLException {
 		return format(rs, DEFAULT_COLSEP, DEFAULT_LINESEP);
@@ -233,7 +232,7 @@ public class RDUtil {
 	 * @param lineSep 행 구분자로 쓰일 문자열
 	 * 
 	 * @return RD 파일 형식으로 변환된 문자열
-	 * @throws SQLException 
+	 * @throws SQLException SQLException
 	 */
 	public static String format(ResultSet rs, String colSep, String lineSep) throws SQLException {
 		if (rs == null) {

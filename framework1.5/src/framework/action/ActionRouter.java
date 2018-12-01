@@ -50,6 +50,8 @@ public class ActionRouter {
 	 * @param servlet 객체를 호출한 서블릿
 	 * @param request 클라이언트에서 요청된 Request객체
 	 * @param response 클라이언트로 응답할 Response객체
+	 * @throws ServletException ServletException
+	 * @throws IOException IOException
 	 */
 	public synchronized void route(GenericServlet servlet, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ResourceBundle bundle = (ResourceBundle) servlet.getServletContext().getAttribute("action-mapping");

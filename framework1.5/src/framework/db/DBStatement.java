@@ -16,7 +16,7 @@ public abstract class DBStatement {
 
 	/**
 	 * Statement의 close 를 구현하기 위한 추상 메소드
-	 * @throws SQLException
+	 * @throws SQLException SQLException
 	 */
 	public abstract void close() throws SQLException;
 

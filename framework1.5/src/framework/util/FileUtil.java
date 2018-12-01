@@ -73,7 +73,7 @@ public class FileUtil {
 	/**
 	 * 인자로 전달된 파일경로에서 파일명만 추출(경로는 제거)하는 메소드
 	 * 
-	 * @param filePath
+	 * @param filePath 파일경로
 	 * @return 경로가 제거된 파일명
 	 */
 	public static String getFileName(String filePath) {
@@ -83,7 +83,7 @@ public class FileUtil {
 	/**
 	 * 인자로 전달된 파일객체에서 파일명만 추출(경로는 제거)하는 메소드
 	 * 
-	 * @param file
+	 * @param file 파일
 	 * @return 경로가 제거된 파일명
 	 */
 	public static String getFileName(File file) {
@@ -95,7 +95,7 @@ public class FileUtil {
 	 * 
 	 * @param src 원본 파일 객체
 	 * @param dest 대상 파일 객체
-	 * @throws IOException
+	 * @throws IOException IOException
 	 */
 	public static void copyFile(java.io.File src, java.io.File dest) throws IOException {
 		java.io.InputStream in = new FileInputStream(src);
@@ -117,7 +117,7 @@ public class FileUtil {
 	 * 
 	 * @param in 입력스트림
 	 * @param out 출력스트림
-	 * @throws IOException
+	 * @throws IOException IOException
 	 */
 	public static void copy(InputStream in, OutputStream out) throws IOException {
 		int availcnt = 1024;
@@ -180,8 +180,8 @@ public class FileUtil {
 	/**
 	 * 이미지 데이터를 stream 으로 전달하는 메소드
 	 * 
-	 * @param response
-	 * @param file
+	 * @param response 응답객체
+	 * @param file 파일
 	 */
 	public static void displayImage(HttpServletResponse response, File file) {
 		if (file != null && file.isFile() && file.length() != 0) {
@@ -198,8 +198,8 @@ public class FileUtil {
 	/**
 	 * 비디오 데이터를 stream 으로 전달하는 메소드
 	 * 
-	 * @param response
-	 * @param file
+	 * @param response 응답객체
+	 * @param file 파일
 	 */
 	public static void displayVideo(HttpServletResponse response, File file) {
 		if (file != null && file.isFile() && file.length() != 0) {
@@ -216,9 +216,9 @@ public class FileUtil {
 	/**
 	 * 파일을 stream 으로 전달하는 메소드
 	 * 
-	 * @param response
-	 * @param displayName
-	 * @param file
+	 * @param response 응답객체
+	 * @param displayName 파일명
+	 * @param file 파일
 	 */
 	public static void download(HttpServletResponse response, String displayName, File file) {
 		if (file != null && file.isFile() && file.length() != 0) {

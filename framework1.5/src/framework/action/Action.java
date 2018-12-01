@@ -46,7 +46,7 @@ public abstract class Action {
 	 * @param servlet 서블릿 객체
 	 * @param request 클라이언트에서 요청된 Request객체
 	 * @param response 클라이언트로 응답할 Response객체
-	 * @throws IOException 
+	 * @throws IOException IOException
 	 */
 	public void execute(HttpServlet servlet, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		setServlet(servlet);
@@ -248,8 +248,6 @@ public abstract class Action {
 	 * ex1) [ name=홍길동 ]인 요청파라미터를 받아오는 경우 : String name = getMultipartInput().getString("name")
 	 * <br>
 	 * ex2) [ age=20 ]인 요청파라미터를 받아오는 경우 : Integer age = getMultipartInput().getInteger("age")
-	 * <br>
-	 * ex3) 전송된 파일를 받아오는 경우 : List<FileItem> files = getMultipartInput().getFileItems()
 	 * 
 	 * @return 요청파라미터의 값을 담는 해시테이블
 	 */

@@ -130,7 +130,7 @@ public class RssUtil {
 	 * @param description 설명 : 필수
 	 * @param webMaster 웹마스터 e-mail 주소(validator를 통과하기 위해서는 "이메일주소(이름)" 형식으로 표기하여야 함) : 옵션
 	 * @return 처리건수
-	 * @throws IOException 
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSet(HttpServletResponse response, RecordSet rs, String encoding, String title, String link, String description, String webMaster) throws IOException {
 		if (rs == null) {
@@ -214,8 +214,8 @@ public class RssUtil {
 	 * @param description 설명 : 필수
 	 * @param webMaster 웹마스터 e-mail 주소(validator를 통과하기 위해서는 "이메일주소(이름)" 형식으로 표기하여야 함) : 옵션
 	 * @return 처리건수
-	 * @throws SQLException 
-	 * @throws IOException 
+	 * @throws SQLException SQLException
+	 * @throws IOException IOException
 	 */
 	public static int setResultSet(HttpServletResponse response, ResultSet rs, String encoding, String title, String link, String description, String webMaster) throws SQLException, IOException {
 		if (rs == null) {
@@ -263,7 +263,8 @@ public class RssUtil {
 	 * @param link 링크(validator를 통과하기 위해서는 url에 앰퍼센드등은 엔터티표기를 사용하여야 함) : 필수
 	 * @param description 설명 : 필수
 	 * @param webMaster 웹마스터 e-mail 주소(validator를 통과하기 위해서는 "이메일주소(이름)" 형식으로 표기하여야 함) : 옵션
-	 * @throws SQLException 
+	 * @throws SQLException SQLException
+	 * @return RSS2.0 형식 문자열
 	 */
 	public static String format(ResultSet rs, String encoding, String title, String link, String description, String webMaster) throws SQLException {
 		if (rs == null) {

@@ -3,6 +3,7 @@
  */
 package framework.util;
 
+import java.io.UnsupportedEncodingException;
 /**
  * 스트링 처리 라이브러리
  */
@@ -251,12 +252,10 @@ public class StringUtil {
 	 * 인자에 해당하는 스트링의 charter-set을 한글로 변환하는 함수
 	 * 
 	 * @param str 원본 문자열
-	 * 
 	 * @return 한글(EUC-KR)로 변환된 문자열
-	 * 
-	 * @exception java.io.UnsupportedEncodingException
+	 * @throws UnsupportedEncodingException UnsupportedEncodingException
 	 */
-	public static String convertKorean(String str) throws java.io.UnsupportedEncodingException {
+	public static String convertKorean(String str) throws UnsupportedEncodingException {
 		return new String(str.getBytes("iso-8859-1"), "EUC-KR");
 	}
 
@@ -264,12 +263,10 @@ public class StringUtil {
 	 * 인자에 해당하는 스트링의 charter-set을 utf-8로 변환하는 함수
 	 * 
 	 * @param str 원본 문자열
-	 * 
 	 * @return 유니코드(UTF-8)로 변환된 문자열
-	 * 
-	 * @exception java.io.UnsupportedEncodingException
+	 * @throws UnsupportedEncodingException UnsupportedEncodingException
 	 */
-	public static String convertUTF8(String str) throws java.io.UnsupportedEncodingException {
+	public static String convertUTF8(String str) throws UnsupportedEncodingException {
 		return new String(str.getBytes("iso-8859-1"), "utf-8");
 	}
 

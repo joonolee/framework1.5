@@ -34,8 +34,8 @@ public class JQGridUtil {
 	 * @param currentPage 현재페이지수
 	 * @param rowsPerPage 한페이지에 표시할 로우수
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSet(HttpServletResponse response, RecordSet rs, int totalCount, int currentPage, int rowsPerPage) throws ColumnNotFoundException, IOException {
 		if (rs == null) {
@@ -80,8 +80,8 @@ public class JQGridUtil {
 	 * @param rowsPerPage 한페이지에 표시할 로우수
 	 * @param colNames 컬럼이름 배열
 	 * @return 처리건수
-	 * @throws ColumnNotFoundException 
-	 * @throws IOException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
+	 * @throws IOException IOException
 	 */
 	public static int setRecordSet(HttpServletResponse response, RecordSet rs, int totalCount, int currentPage, int rowsPerPage, String[] colNames) throws ColumnNotFoundException, IOException {
 		if (rs == null) {
@@ -123,7 +123,7 @@ public class JQGridUtil {
 	 * @param currentPage 현재페이지수
 	 * @param rowsPerPage 한페이지에 표시할 로우수
 	 * @return jqGrid 형식으로 변환된 문자열
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
 	 */
 	public static String format(RecordSet rs, int totalCount, int currentPage, int rowsPerPage) throws ColumnNotFoundException {
 		StringBuilder buffer = new StringBuilder();
@@ -167,7 +167,7 @@ public class JQGridUtil {
 	 * @param rowsPerPage 한페이지에 표시할 로우수
 	 * @param colNames 컬럼이름 배열
 	 * @return jqGrid 형식으로 변환된 문자열
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException ColumnNotFoundException
 	 */
 	public static String format(RecordSet rs, int totalCount, int currentPage, int rowsPerPage, String[] colNames) throws ColumnNotFoundException {
 		StringBuilder buffer = new StringBuilder();
@@ -212,8 +212,8 @@ public class JQGridUtil {
 	 * @param currentPage 현재페이지수
 	 * @param rowsPerPage 한페이지에 표시할 로우수
 	 * @return 처리건수
-	 * @throws SQLException 
-	 * @throws IOException
+	 * @throws SQLException SQLException
+	 * @throws IOException IOException
 	 */
 	public static int setResultSet(HttpServletResponse response, ResultSet rs, int totalCount, int currentPage, int rowsPerPage) throws SQLException, IOException {
 		if (rs == null) {
@@ -272,8 +272,8 @@ public class JQGridUtil {
 	 * @param rowsPerPage 한페이지에 표시할 로우수
 	 * @param colNames 컬럼이름 배열
 	 * @return 처리건수
-	 * @throws SQLException 
-	 * @throws IOException
+	 * @throws SQLException SQLException
+	 * @throws IOException IOException
 	 */
 	public static int setResultSet(HttpServletResponse response, ResultSet rs, int totalCount, int currentPage, int rowsPerPage, String[] colNames) throws SQLException, IOException {
 		if (rs == null) {
@@ -329,7 +329,7 @@ public class JQGridUtil {
 	 * @param currentPage 현재페이지수
 	 * @param rowsPerPage 한페이지에 표시할 로우수
 	 * @return jqGrid 형식으로 변환된 문자열
-	 * @throws SQLException 
+	 * @throws SQLException SQLException
 	 */
 	public static String format(ResultSet rs, int totalCount, int currentPage, int rowsPerPage) throws SQLException {
 		if (rs == null) {
@@ -387,7 +387,7 @@ public class JQGridUtil {
 	 * @param rowsPerPage 한페이지에 표시할 로우수
 	 * @param colNames 컬럼이름 배열
 	 * @return jqGrid 형식으로 변환된 문자열
-	 * @throws SQLException 
+	 * @throws SQLException SQLException
 	 */
 	public static String format(ResultSet rs, int totalCount, int currentPage, int rowsPerPage, String[] colNames) throws SQLException {
 		if (rs == null) {
@@ -486,6 +486,7 @@ public class JQGridUtil {
 	 * 자바스크립트상에 특수하게 인식되는 문자들을 JSON등에 사용하기 위해 변환하여준다.
 	 * 
 	 * @param str 변환할 문자열
+	 * @return escape 된 문자열
 	 */
 	public static String escapeJS(String str) {
 		if (str == null) {
