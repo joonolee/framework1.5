@@ -1,4 +1,4 @@
-/* 
+/*
  * @(#)FileUtil.java
  */
 package framework.util;
@@ -21,7 +21,7 @@ public class FileUtil {
 
 	/**
 	 * 인자로 전달된 경로에 해당하는 디렉토리의 크기를 byte 단위로 반환하는 메소드
-	 * 
+	 *
 	 * @param directoryPath 디렉토리 경로
 	 * @return 디렉토리의 byte 단위의 크기
 	 */
@@ -31,7 +31,7 @@ public class FileUtil {
 
 	/**
 	 * 인자로 전달된 디렉토리의 크기를 byte 단위로 반환하는 메소드
-	 * 
+	 *
 	 * @param directory 디렉토리 파일객체
 	 * @return 디렉토리의 byte 단위의 크기
 	 */
@@ -52,7 +52,7 @@ public class FileUtil {
 
 	/**
 	 * 인자로 전달된 파일의 확장자를 반환하는 메소드
-	 * 
+	 *
 	 * @param file 확장자를 알고자 원하는 파일명
 	 * @return 확장자명
 	 */
@@ -62,7 +62,7 @@ public class FileUtil {
 
 	/**
 	 * 인자로 전달된 파일명의 확장자를 반환하는 메소드
-	 * 
+	 *
 	 * @param filePath 확장자를 알고자 원하는 파일명
 	 * @return 확장자명
 	 */
@@ -72,7 +72,7 @@ public class FileUtil {
 
 	/**
 	 * 인자로 전달된 파일경로에서 파일명만 추출(경로는 제거)하는 메소드
-	 * 
+	 *
 	 * @param filePath 파일경로
 	 * @return 경로가 제거된 파일명
 	 */
@@ -82,7 +82,7 @@ public class FileUtil {
 
 	/**
 	 * 인자로 전달된 파일객체에서 파일명만 추출(경로는 제거)하는 메소드
-	 * 
+	 *
 	 * @param file 파일
 	 * @return 경로가 제거된 파일명
 	 */
@@ -92,7 +92,7 @@ public class FileUtil {
 
 	/**
 	 * 파일을 복사하는 메소드
-	 * 
+	 *
 	 * @param src 원본 파일 객체
 	 * @param dest 대상 파일 객체
 	 * @throws IOException IOException
@@ -114,7 +114,7 @@ public class FileUtil {
 
 	/**
 	 * 입력 stream 데이터를 출력 stream 으로 복사하는 메소드
-	 * 
+	 *
 	 * @param in 입력스트림
 	 * @param out 출력스트림
 	 * @throws IOException IOException
@@ -131,7 +131,7 @@ public class FileUtil {
 
 	/**
 	 * 파일 삭제 메소드
-	 * 
+	 *
 	 * @param fileName 파일 경로
 	 * @return 성공여부
 	 */
@@ -141,7 +141,7 @@ public class FileUtil {
 
 	/**
 	 * 파일 삭제 메소드
-	 * 
+	 *
 	 * @param file 파일 객체
 	 * @return 성공여부
 	 */
@@ -151,7 +151,7 @@ public class FileUtil {
 
 	/**
 	 * 디렉토리 삭제 메소드
-	 * 
+	 *
 	 * @param directoryPath 디렉토리 경로
 	 * @return 성공여부
 	 */
@@ -161,7 +161,7 @@ public class FileUtil {
 
 	/**
 	 * 디렉토리 삭제 메소드
-	 * 
+	 *
 	 * @param directory 디렉토리 객체
 	 * @return 성공여부
 	 */
@@ -179,7 +179,7 @@ public class FileUtil {
 
 	/**
 	 * 이미지 데이터를 stream 으로 전달하는 메소드
-	 * 
+	 *
 	 * @param response 응답객체
 	 * @param file 파일
 	 */
@@ -197,7 +197,7 @@ public class FileUtil {
 
 	/**
 	 * 비디오 데이터를 stream 으로 전달하는 메소드
-	 * 
+	 *
 	 * @param response 응답객체
 	 * @param file 파일
 	 */
@@ -215,7 +215,7 @@ public class FileUtil {
 
 	/**
 	 * 파일을 stream 으로 전달하는 메소드
-	 * 
+	 *
 	 * @param response 응답객체
 	 * @param displayName 파일명
 	 * @param file 파일

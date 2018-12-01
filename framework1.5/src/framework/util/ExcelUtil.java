@@ -26,7 +26,7 @@ import framework.db.RecordSet;
 public class ExcelUtil {
 
 	/**
-	 * 3가지 파일 타입(CSV, TSV, XML)을 지원한다. 
+	 * 3가지 파일 타입(CSV, TSV, XML)을 지원한다.
 	 */
 	public enum FileType {
 		CSV, TSV, XML
@@ -81,7 +81,7 @@ public class ExcelUtil {
 	 * RecordSet을 구분자(CSV, TSV 등)파일 형식으로 출력한다.
 	 * <br>
 	 * ex) response로 rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 출력하는 경우 : ExcelUtil.setRecordSetSep(response, rs, ",")
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs 구분자(CSV, TSV 등)파일 형식으로 변환할 RecordSet 객체
 	 * @param sep 열 구분자로 쓰일 문자열
@@ -110,10 +110,10 @@ public class ExcelUtil {
 	 * RecordSet을 구분자(CSV, TSV 등)파일 형식으로 변환한다.
 	 * <br>
 	 * ex) rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 변환하는 경우 : String csv = ExcelUtil.formatSep(rs, ",")
-	 * 
+	 *
 	 * @param rs 변환할 RecordSet 객체
 	 * @param sep 열 구분자로 쓰일 문자열
-	 * 
+	 *
 	 * @return 구분자(CSV, TSV 등)파일 형식으로 변환된 문자열
 	 * @throws ColumnNotFoundException ColumnNotFoundException
 	 */
@@ -268,7 +268,7 @@ public class ExcelUtil {
 	 * ResultSet을 구분자(CSV, TSV 등)파일 형식으로 출력한다.
 	 * <br>
 	 * ex) response로 rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 출력하는 경우 : ExcelUtil.setResultSetSep(response, rs, ",")
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs 구분자(CSV, TSV 등)파일 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * @param sep 열 구분자로 쓰일 문자열
@@ -331,10 +331,10 @@ public class ExcelUtil {
 	 * ResultSet을 구분자(CSV, TSV 등)파일 형식으로 변환한다.
 	 * <br>
 	 * ex) rs를 열구분자 콤마(,) 인 구분자(CSV, TSV 등)파일 형식으로 변환하는 경우 : String csv = ExcelUtil.formatSep(rs, ",")
-	 * 
+	 *
 	 * @param rs 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * @param sep 열 구분자로 쓰일 문자열
-	 * 
+	 *
 	 * @return 구분자(CSV, TSV 등)파일 형식으로 변환된 문자열
 	 * @throws SQLException SQLException
 	 */
@@ -701,7 +701,7 @@ public class ExcelUtil {
 
 	/**
 	 * 구분자로 쓰이는 문자열 또는 개행문자가 값에 포함되어 있을 경우 값을 쌍따옴표로 둘러싸도록 변환한다.
-	 * 
+	 *
 	 * @param str 변환할 문자열
 	 * @param sep 열 구분자로 쓰일 문자열
 	 * @return escape 된 문자열
@@ -741,7 +741,7 @@ public class ExcelUtil {
 	/**
 	 * 구분자(CSV, TSV 등)파일 생성용 Row 문자열 생성
 	 * 데이타가 숫자가 아닐때에는 구분자로 쓰인 문자열 또는 개행문자를 escape 하기 위해 값을 쌍따옴표로 둘러싼다.
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException
 	 */
 	private static String sepRowStr(RecordSet rs, String[] colNms, String sep) throws ColumnNotFoundException {
 		StringBuilder buffer = new StringBuilder();
@@ -792,7 +792,7 @@ public class ExcelUtil {
 
 	/**
 	 * xml excel 용 Row 문자열 생성
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException
 	 */
 	private static String xmlRowStr(RecordSet rs, String[] colNms, String[] colInfo) throws ColumnNotFoundException {
 		StringBuilder buffer = new StringBuilder();

@@ -1,4 +1,4 @@
-/** 
+/**
  * @(#)QRCodeUtil.java
  */
 package framework.util;

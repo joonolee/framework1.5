@@ -1,4 +1,4 @@
-/** 
+/**
  * @(#)GauceUtil.java
  */
 package framework.util;
@@ -35,7 +35,7 @@ public class GauceUtil {
 	 * RecordSet을 가우스 데이타셋으로 변환하여 응답객체로 전송한다.
 	 * <br>
 	 * ex) rs를 가우스 데이터셋으로 변환하여 response로 전송하는 경우 : GauceUtil.setRecordSet(response, rs)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs 가우스 데이타셋으로 변환할 RecordSet 객체
 	 * @return 처리건수
@@ -50,7 +50,7 @@ public class GauceUtil {
 	 * RecordSet을 가우스 데이타셋(명칭은 datasetName 인자 값)으로 변환하여 응답객체로 전송한다.
 	 * <br>
 	 * ex) rs를 가우스 데이터셋(명칭은 result)으로 변환하여 response로 전송하는 경우 : GauceUtil.setRecordSet(response, "result", rs)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param datasetName 데이타셋 이름
 	 * @param rs 가우스 데이타셋으로 변환할 RecordSet 객체
@@ -66,7 +66,7 @@ public class GauceUtil {
 	 * RecordSet을 가우스 데이타셋(명칭은 datasetNameArray 인자 값)으로 변환하여 응답객체로 전송한다.
 	 * <br>
 	 * ex) rs1과 rs2를 가우스 데이터셋으로 변환하여 response로 전송하는 경우 : GauceUtil.setRecordSet(response, new String[] { "result1", "result2" }, new RecordSet[] { rs1, rs2 })
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param datasetNameArray 데이타셋 이름 배열
 	 * @param rsArray 가우스 데이타셋으로 변환할 RecordSet 객체 배열
@@ -92,7 +92,7 @@ public class GauceUtil {
 	 * RecordSet을 인자로 넘어온 가우스 데이타셋으로 변환하여 응답객체로 전송한다.
 	 * <br>
 	 * ex) rs를 가우스 데이터셋으로 변환하여 response로 전송하는 경우 : GauceUtil.setRecordSet(response, dSet, rs)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param dSet 데이타셋
 	 * @param rs 가우스 데이타셋으로 변환할 RecordSet 객체
@@ -108,7 +108,7 @@ public class GauceUtil {
 	 * RecordSet을 인자로 넘어온 가우스 데이타셋으로 변환하여 응답객체로 전송한다.
 	 * <br>
 	 * ex) rs1과 rs2를 가우스 데이터셋으로 변환하여 response로 전송하는 경우 : GauceUtil.setRecordSet(response, new GauceDataSet[] { dSet1, dSet2 }, new RecordSet[] { rs1, rs2 })
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param dSetArray 데이타셋 배열
 	 * @param rsArray 가우스 데이타셋으로 변환할 RecordSet 객체 배열
@@ -134,7 +134,7 @@ public class GauceUtil {
 	 * RecordSet을 가우스 데이타셋으로 변환한다.
 	 * <br>
 	 * ex) rs를 dSet이라는 가우스 데이터셋으로 변환하는 경우 : GauceUtil.appendDataSet(dSet, rs)
-	 * 
+	 *
 	 * @param dSet 출력용 가우스 데이타셋 객체
 	 * @param rs 가우스 데이타셋으로 변환할 RecordSet 객체
 	 * @return 처리건수
@@ -149,7 +149,7 @@ public class GauceUtil {
 		int[] colSize = rs.getColumnsSize();
 		int[] colSizeReal = rs.getColumnsSizeReal();
 		int[] colScale = rs.getColumnsScale();
-		rs.moveRow(0); // rs의 위치를 1번째로 이동 
+		rs.moveRow(0); // rs의 위치를 1번째로 이동
 		int rowCount = 0;
 		while (rs.nextRow()) {
 			rowCount++;
@@ -163,7 +163,7 @@ public class GauceUtil {
 	 * ResultSet을 가우스 데이타셋으로 변환하여 응답객체로 전송한다.
 	 * <br>
 	 * ex) rs를 가우스 데이터셋으로 변환하여 response로 전송하는 경우 : GauceUtil.ResultSet(response, rs)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs 가우스 데이타셋으로 변환할 RecordSet 객체
 	 * @return 처리건수
@@ -178,7 +178,7 @@ public class GauceUtil {
 	 * ResultSet을 가우스 데이타셋(명칭은 datasetName 인자 값)으로 변환하여 응답객체로 전송한다.
 	 * <br>
 	 * ex) rs를 가우스 데이터셋(명칭은 result)으로 변환하여 response로 전송하는 경우 : GauceUtil.ResultSet(response, "result", rs)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param datasetName 데이타셋 이름
 	 * @param rs 가우스 데이타셋으로 변환할 RecordSet 객체
@@ -194,7 +194,7 @@ public class GauceUtil {
 	 * ResultSet을 가우스 데이타셋(명칭은 datasetNameArray 인자 값)으로 변환하여 응답객체로 전송한다.
 	 * <br>
 	 * ex) rs1과 rs2를 가우스 데이터셋으로 변환하여 response로 전송하는 경우 : GauceUtil.setResultSet(response, new String[] { "result1", "result2" }, new ResultSet[] { rs1, rs2 })
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param datasetNameArray 데이타셋 이름 배열
 	 * @param rsArray 가우스 데이타셋으로 변환할 ResultSet 객체 배열, ResultSet 객체는 자동으로 close 된다.
@@ -220,7 +220,7 @@ public class GauceUtil {
 	 * ResultSet을 인자로 넘어온 가우스 데이타셋으로 변환하여 응답객체로 전송한다.
 	 * <br>
 	 * ex) rs를 가우스 데이터셋으로 변환하여 response로 전송하는 경우 : GauceUtil.ResultSet(response, dSet, rs)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param dSet 데이타셋
 	 * @param rs 가우스 데이타셋으로 변환할 RecordSet 객체
@@ -236,7 +236,7 @@ public class GauceUtil {
 	 * ResultSet을 인자로 넘어온 가우스 데이타셋으로 변환하여 응답객체로 전송한다.
 	 * <br>
 	 * ex) rs1과 rs2를 가우스 데이터셋으로 변환하여 response로 전송하는 경우 : GauceUtil.setResultSet(response, new GauceDataSet[] { dSet1, dSet2 }, new ResultSet[] { rs1, rs2 })
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param dSetArray 데이타셋 이름 배열
 	 * @param rsArray 가우스 데이타셋으로 변환할 ResultSet 객체 배열, ResultSet 객체는 자동으로 close 된다.
@@ -262,7 +262,7 @@ public class GauceUtil {
 	 * ResultSet을 가우스 데이타셋으로 변환한다.
 	 * <br>
 	 * ex) rs를 dSet이라는 가우스 데이터셋으로 변환하는 경우 : GauceUtil.appendDataSet(dSet, rs)
-	 * 
+	 *
 	 * @param dSet 출력용 가우스데이타셋 객체
 	 * @param rs 가우스 데이타셋으로 변환할 ResultSet 객체
 	 * @return 처리건수
@@ -313,9 +313,9 @@ public class GauceUtil {
 	 * 해당 HttpServletRequest로 부터 GauceInputStream을 반환받는다
 	 * <br>
 	 * ex) 요청객체로 부터 가우스 입력스트림을 구하는 경우 : GauceInputStream gis = GauceUtil.getGIS(request)
-	 * 
+	 *
 	 * @param request 클라이언트에서 요청된 Request 객체
-	 * 
+	 *
 	 * @return 요청객체에서 구한 GauceInputStream 객체
 	 * @throws IOException IOException
 	 */
@@ -329,9 +329,9 @@ public class GauceUtil {
 	 * 해당 HttpServletResponse로 부터 GauceOutputStream을 반환받는다
 	 * <br>
 	 * ex) 응답객체로 부터 가우스 출력스트림을 구하는 경우 : GauceOutputStream gos = GauceUtil.getGOS(response)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
-	 * 
+	 *
 	 * @return 응답객체에서 구한 GauceOutputStream 객체
 	 * @throws IOException IOException
 	 */
@@ -345,7 +345,7 @@ public class GauceUtil {
 	 * 세션객체가 null 인 경우 클라이언트에게 세션이 없음을 알리기 위해 예외를 설정한다.
 	 * <br>
 	 * ex) GauceUtil.setSessionException(getResponse())
-	 * 
+	 *
 	 * @param response response 클라이언트로 응답할 Response 객체
 	 */
 	public static void setSessionException(HttpServletResponse response) {
@@ -360,7 +360,7 @@ public class GauceUtil {
 	 * 클라이언트에게 가우스 예외를 설정한다.
 	 * <br>
 	 * ex) GauceUtil.setException(new GauceException("Native", "9999", e.toString()), getResponse())
-	 * 
+	 *
 	 * @param exception 클라이언트로 응답할 GauceException 객체
 	 * @param response 클라이언트로 응답할 Response 객체
 	 */
@@ -376,9 +376,9 @@ public class GauceUtil {
 	 * 해당 GauceDataSet로 부터 Box를 반환받는다
 	 * <br>
 	 * ex) GauceDataSet으로 부터 Box를 구하는 경우 : Box box = GauceUtil.getBox(dSet)
-	 * 
+	 *
 	 * @param dSet Box로 변환할 GauceDataSet 객체
-	 * 
+	 *
 	 * @return GauceDataSet에서 구한 Box 객체
 	 */
 	public static Box getBox(GauceDataSet dSet) {
@@ -397,7 +397,7 @@ public class GauceUtil {
 	//////////////////////////////////////////////////////////////////////////////////////// Private 메소드
 	/**
 	 * 가우스 데이타셋에 RecordSet 한행 추가
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException
 	 */
 	private static void appendRow(GauceDataSet dSet, RecordSet rs, String[] colNms, String[] colInfo, int[] colSize, int[] colSizeReal, int[] colScale) throws ColumnNotFoundException {
 		for (int c = 0; c < colNms.length; c++) {
@@ -429,7 +429,7 @@ public class GauceUtil {
 
 	/**
 	 * 가우스 데이타셋에 ResultSet 한행 추가
-	 * @throws SQLException 
+	 * @throws SQLException
 	 */
 	private static void appendRow(GauceDataSet dSet, ResultSet rs, String[] colNms, String[] colInfo, int[] colSize, int[] colSizeReal, int[] colScale) throws SQLException {
 		for (int c = 0; c < colNms.length; c++) {

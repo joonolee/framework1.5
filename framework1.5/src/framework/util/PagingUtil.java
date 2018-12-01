@@ -1,4 +1,4 @@
-/* 
+/*
  * @(#)PagingUtil.java
  */
 package framework.util;
@@ -12,9 +12,9 @@ import java.util.Map;
 public class PagingUtil {
 	/**
 	 * 페이징을 위해 필요한 정보를 리턴한다.
-	 * 
+	 *
 	 * @param totcnt 전체 레코드 건수
-	 * @param pagenum 현재 페이지 번호 
+	 * @param pagenum 현재 페이지 번호
 	 * @param pagesize 한페이지에 보여질 사이즈
 	 * @param displaysize 네비게이션 페이징 사이즈
 	 * @return totalpage(전체페이지수), pagenum(현재페이지), startpage(시작페이지), endpage(끝페이지)정보를 담고 있는 맵 객체

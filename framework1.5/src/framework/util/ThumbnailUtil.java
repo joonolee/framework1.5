@@ -1,4 +1,4 @@
-/** 
+/**
  * @(#)ThumbnailUtil.java
  */
 package framework.util;
@@ -23,7 +23,7 @@ public class ThumbnailUtil {
 
 	/**
 	 * <b>섬네일 이미지를 생성한다.</b> 소스 이미지 파일의 width, height 중, <b>크기가 큰 쪽을 기준으로 하여 이미지를 생성</b>한다.
-	 * 
+	 *
 	 * @param srcFile 		: 소스 파일 객체
 	 * @param destFile 		: 결과 파일 객체
 	 * @param standardWidth : 결과 파일의 가로 기준 사이즈
@@ -35,7 +35,7 @@ public class ThumbnailUtil {
 
 	/**
 	 * <b>섬네일 이미지를 생성한다.</b> 소스 이미지 파일의 width, height 중, <b>크기가 큰 쪽을 기준으로 하여 이미지를 생성</b>한다.
-	 * 
+	 *
 	 * @param srcFileName 		: 소스파일명(경로포함)
 	 * @param destFileName 		: 결과파일명(경로포함)
 	 * @param standardWidth 	: 결과 파일의 가로 기준 사이즈

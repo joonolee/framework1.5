@@ -1,4 +1,4 @@
-/* 
+/*
  * @(#)SQLBatchStatement.java
  * Statement의 Batch 처리를 이용하기 위한 객체
  */
@@ -52,6 +52,7 @@ public class SQLBatchPreparedStatement extends DBStatement {
 		return _pstmt;
 	}
 
+	@Override
 	public void close() throws SQLException {
 		try {
 			if (_pstmt != null) {
@@ -124,6 +125,7 @@ public class SQLBatchPreparedStatement extends DBStatement {
 		return this._sql;
 	}
 
+	@Override
 	public String toString() {
 		return "SQL : " + getSQL();
 	}

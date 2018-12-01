@@ -1,4 +1,4 @@
-/* 
+/*
  * @(#)SQLPreparedStatement.java
  * Prepared Statement 를 이용하기 위한 객체
  */
@@ -29,6 +29,7 @@ public class SQLPreparedStatement extends DBStatement {
 		this._caller = caller;
 	}
 
+	@Override
 	public void close() throws SQLException {
 		try {
 			if (_pstmt != null) {
@@ -221,6 +222,7 @@ public class SQLPreparedStatement extends DBStatement {
 		_sql = newSql;
 	}
 
+	@Override
 	public String toString() {
 		return "SQL : " + getSQL();
 	}

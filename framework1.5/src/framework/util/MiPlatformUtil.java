@@ -1,4 +1,4 @@
-/** 
+/**
  * @(#)MiPlatformUtil.java
  */
 package framework.util;
@@ -49,7 +49,7 @@ public class MiPlatformUtil {
 	 * RecordSet을 마이플랫폼 데이타셋(명칭은 datasetName 인자 값)으로 변환하여 응답객체로 전송한다.
 	 * <br>
 	 * ex) rs를 마이플랫폼 데이터셋(명칭은 result)으로 변환하여 response로 XML 형식으로 전송하는 경우 : MiPlatformUtil.setRecordSet(response, "result", rs, MiPlatformUtil.XML)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param datasetName 데이타셋 이름
 	 * @param rs 마이플랫폼 데이타셋으로 변환할 RecordSet 객체
@@ -66,7 +66,7 @@ public class MiPlatformUtil {
 	 * RecordSet을 마이플랫폼 데이타셋(명칭은 datasetNameArray 인자 값)으로 변환하여 응답객체로 전송한다.
 	 * <br>
 	 * ex) rs1과 rs2를 마이플랫폼 데이터셋으로 변환하여 response로 XML 형식으로 전송하는 경우 : MiPlatformUtil.setRecordSet(response, new String[] { "result1", "result2" }, new RecordSet[] { rs1, rs2 }, MiPlatformUtil.XML)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param datasetNameArray 데이타셋 이름 배열
 	 * @param rsArray 마이플랫폼 데이타셋으로 변환할 RecordSet 객체 배열
@@ -103,7 +103,7 @@ public class MiPlatformUtil {
 	 * RecordSet을 마이플랫폼 데이타셋으로 변환한다.
 	 * <br>
 	 * ex) rs를 dSet이라는 마이플랫폼 데이터셋으로 변환하는 경우 : MiPlatformUtil.appendDataset(dSet, rs)
-	 * 
+	 *
 	 * @param dSet 출력용 마이플랫폼 데이타셋 객체
 	 * @param rs 마이플랫폼 데이타셋으로 변환할 RecordSet 객체
 	 * @return 처리건수
@@ -118,7 +118,7 @@ public class MiPlatformUtil {
 		int[] colSize = rs.getColumnsSize();
 		int[] colSizeReal = rs.getColumnsSizeReal();
 		int[] colScale = rs.getColumnsScale();
-		rs.moveRow(0); // rs의 위치를 1번째로 이동 
+		rs.moveRow(0); // rs의 위치를 1번째로 이동
 		int rowCount = 0;
 		// 컬럼 레이아웃 셋팅
 		for (int c = 0; c < colNms.length; c++) {
@@ -140,7 +140,7 @@ public class MiPlatformUtil {
 	 * ResultSet을 마이플랫폼 데이타셋(명칭은 datasetName 인자 값)으로 변환하여 응답객체로 전송한다.
 	 * <br>
 	 * ex) rs를 마이플랫폼 데이터셋(명칭은 result)으로 변환하여 response로 XML 형식으로 전송하는 경우 : MiPlatformUtil.setResultSet(response, "result", rs, MiPlatformUtil.XML)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param datasetName 데이타셋 이름
 	 * @param rs 마이플랫폼 데이타셋으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
@@ -157,7 +157,7 @@ public class MiPlatformUtil {
 	 * ResultSet을 마이플랫폼 데이타셋(명칭은 datasetNameArray 인자 값)으로 변환하여 응답객체로 전송한다.
 	 * <br>
 	 * ex) rs1과 rs2를 마이플랫폼 데이터셋으로 변환하여 response로 XML 형식으로 전송하는 경우 : MiPlatformUtil.setResultSet(response, new String[] { "result1", "result2" }, new ResultSet[] { rs1, rs2 }, MiPlatformUtil.XML)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param datasetNameArray 데이타셋 이름 배열
 	 * @param rsArray 마이플랫폼 데이타셋으로 변환할 ResultSet 객체 배열, ResultSet 객체는 자동으로 close 된다.
@@ -194,7 +194,7 @@ public class MiPlatformUtil {
 	 * ResultSet을 마이플랫폼 데이타셋으로 변환한다.
 	 * <br>
 	 * ex) rs를 dSet이라는 마이플랫폼 데이터셋으로 변환하는 경우 : MiPlatformUtil.appendDataset(dSet, rs)
-	 * 
+	 *
 	 * @param dSet 출력용 마이플랫폼 데이타셋 객체
 	 * @param rs 마이플랫폼 데이타셋으로 변환할 ResultSet 객체
 	 * @return 처리건수
@@ -252,7 +252,7 @@ public class MiPlatformUtil {
 	 * 해당 HttpServletRequest로 부터 PlatformRequest 반환받는다
 	 * <br>
 	 * ex) 요청객체로 부터 마이플랫폼 요청객체를 구하는 경우 : PlatformRequest pReq = MiPlatformUtil.getPReq(request)
-	 * 
+	 *
 	 * @param request 클라이언트에서 요청된 Request 객체
 	 * @return 요청객체에서 구한 PlatformRequest 객체
 	 * @throws IOException IOException
@@ -268,7 +268,7 @@ public class MiPlatformUtil {
 	 * 해당 HttpServletRequest로 부터 encoding 형식의 PlatformRequest 반환받는다
 	 * <br>
 	 * ex) 요청객체로 부터 utf-8 형식의 마이플랫폼 요청객체를 구하는 경우 : PlatformRequest pReq = MiPlatformUtil.getPReq(request, "utf-8")
-	 * 
+	 *
 	 * @param request 클라이언트에서 요청된 Request 객체
 	 * @param encoding 인코딩할 형식
 	 * @return 요청객체에서 구한 PlatformRequest 객체
@@ -285,7 +285,7 @@ public class MiPlatformUtil {
 	 * 해당 HttpServletResponse로 부터 PlatformResponse 반환받는다
 	 * <br>
 	 * ex) 응답객체로 부터 XML 송수신 형식의 마이플랫폼 응답객체를 구하는 경우 : PlatformResponse pRes = MiPlatformUtil.getPRes(response, MiPlatformUtil.XML)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param dataFormat 송수신 형식 (MiPlatformUtil.BIN, MiPlatformUtil.ZLIB_COMP, MiPlatformUtil.XML)
 	 * @return 응답객체에서 구한 PlatformResponse 객체
@@ -301,7 +301,7 @@ public class MiPlatformUtil {
 	 * 해당 HttpServletResponse로 부터 encoding 형식의 PlatformResponse 반환받는다
 	 * <br>
 	 * ex) 응답객체로 부터 utf-8 형식의 XML 송수신 형식의 마이플랫폼 응답객체를 구하는 경우 : PlatformResponse pRes = MiPlatformUtil.getPRes(response, MiPlatformUtil.XML, "utf-8")
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param dataFormat 송수신 형식 (MiPlatformUtil.BIN, MiPlatformUtil.ZLIB_COMP, MiPlatformUtil.XML)
 	 * @param encoding 인코딩할 형식
@@ -318,7 +318,7 @@ public class MiPlatformUtil {
 	 * 해당 DataSet로 부터 Box를 반환받는다
 	 * <br>
 	 * ex) DataSet으로 부터 Box를 구하는 경우 : Box box = MiPlatformUtil.getBox(dSet)
-	 * 
+	 *
 	 * @param dSet Box로 변환할 DataSet 객체
 	 * @return DataSet에서 구한 Box 객체
 	 */
@@ -338,7 +338,7 @@ public class MiPlatformUtil {
 	 * VariableList와 DatasetList를 응답객체로 전송한다.
 	 * <br>
 	 * ex) vl과 dl을 response로 XML 형식으로 전송하는 경우 : MiPlatformUtil.sendData(response, vl, dl, MiPlatformUtil.XML)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param vl 마이플랫폼 VariableList 객체
 	 * @param dl 마이플랫폼 DatasetList 객체
@@ -350,13 +350,13 @@ public class MiPlatformUtil {
 		pResponse.sendData(vl, dl);
 	}
 
-	/** 
+	/**
 	 * Dataset의 값을 추출하여 String 객체를 리턴한다.
-	 * 
+	 *
 	 * @param dSet 값을 추출할 Dataset
 	 * @param row 추출할 행번호
 	 * @param colName 추출할 열이름
-	 * 
+	 *
 	 * @return 추출된 값을 담고 있는 String 객체
 	 */
 	public static String getString(Dataset dSet, int row, String colName) {
@@ -367,13 +367,13 @@ public class MiPlatformUtil {
 		return str;
 	}
 
-	/** 
+	/**
 	 * Dataset의 값을 추출하여 Double 객체를 리턴한다.
-	 * 
+	 *
 	 * @param dSet 값을 추출할 Dataset
 	 * @param row 추출할 행번호
 	 * @param colName 추출할 열이름
-	 * 
+	 *
 	 * @return 추출된 값을 담고 있는 Double 객체
 	 */
 	public static Double getDouble(Dataset dSet, int row, String colName) {
@@ -390,13 +390,13 @@ public class MiPlatformUtil {
 		return num;
 	}
 
-	/** 
+	/**
 	 * Dataset의 값을 추출하여 Long 객체를 리턴한다.
-	 * 
+	 *
 	 * @param dSet 값을 추출할 Dataset
 	 * @param row 추출할 행번호
 	 * @param colName 추출할 열이름
-	 * 
+	 *
 	 * @return 추출된 값을 담고 있는 Long 객체
 	 */
 	public static Long getLong(Dataset dSet, int row, String colName) {
@@ -404,13 +404,13 @@ public class MiPlatformUtil {
 		return Long.valueOf(value.longValue());
 	}
 
-	/** 
+	/**
 	 * Dataset의 값을 추출하여 Integer 객체를 리턴한다.
-	 * 
+	 *
 	 * @param dSet 값을 추출할 Dataset
 	 * @param row 추출할 행번호
 	 * @param colName 추출할 열이름
-	 * 
+	 *
 	 * @return 추출된 값을 담고 있는 Integer 객체
 	 */
 	public static Integer getInteger(Dataset dSet, int row, String colName) {
@@ -418,26 +418,26 @@ public class MiPlatformUtil {
 		return Integer.valueOf(value.intValue());
 	}
 
-	/** 
+	/**
 	 * Dataset의 값을 추출하여 Float 객체를 리턴한다.
-	 * 
+	 *
 	 * @param dSet 값을 추출할 Dataset
 	 * @param row 추출할 행번호
 	 * @param colName 추출할 열이름
-	 * 
+	 *
 	 * @return 추출된 값을 담고 있는 Float 객체
 	 */
 	public static Float getFloat(Dataset dSet, int row, String colName) {
 		return new Float(getDouble(dSet, row, colName).doubleValue());
 	}
 
-	/** 
+	/**
 	 * Dataset의 값을 추출하여 BigDecimal 객체를 리턴한다.
-	 * 
+	 *
 	 * @param dSet 값을 추출할 Dataset
 	 * @param row 추출할 행번호
 	 * @param colName 추출할 열이름
-	 * 
+	 *
 	 * @return 추출된 값을 담고 있는 BigDecimal 객체
 	 */
 	public static BigDecimal getBigDecimal(Dataset dSet, int row, String colName) {
@@ -455,7 +455,7 @@ public class MiPlatformUtil {
 	//////////////////////////////////////////////////////////////////////////////////////// Private 메소드
 	/**
 	 * 마이플랫폼 데이타셋에 RecordSet 한행 추가
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException
 	 */
 	private static void appendRow(Dataset dSet, RecordSet rs, String[] colNms, String[] colInfo, int[] colSize, int[] colSizeReal, int[] colScale) throws ColumnNotFoundException {
 		if (rs.getRowCount() == 0)
@@ -480,7 +480,7 @@ public class MiPlatformUtil {
 
 	/**
 	 * 마이플랫폼 데이타셋에 ResultSet 한행 추가
-	 * @throws SQLException 
+	 * @throws SQLException
 	 */
 	private static void appendRow(Dataset dSet, ResultSet rs, String[] colNms, String[] colInfo, int[] colSize, int[] colSizeReal, int[] colScale) throws SQLException {
 		if (rs.getRow() == 0)

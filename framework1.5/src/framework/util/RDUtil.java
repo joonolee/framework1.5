@@ -1,4 +1,4 @@
-/* 
+/*
  * @(#)RDUtil.java
  */
 package framework.util;
@@ -41,7 +41,7 @@ public class RDUtil {
 	 * 행, 열 구분자로 디폴트 구분자를 사용한다.
 	 * <br>
 	 * ex) response로 rs를 RD 파일 형식으로 출력하는 경우 : RDUtil.setRecordSet(response, rs)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs RD 파일 형식으로 변환할 RecordSet 객체
 	 * @return 처리건수
@@ -56,7 +56,7 @@ public class RDUtil {
 	 * RecordSet을 RD 파일 형식으로 출력한다.
 	 * <br>
 	 * ex) response로 rs를 RD 파일 형식으로 출력하는 경우 : RDUtil.setRecordSet(response, rs)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs RD 파일 형식으로 변환할 RecordSet 객체
 	 * @param colSep 열 구분자로 쓰일 문자열
@@ -87,9 +87,9 @@ public class RDUtil {
 	 * 행, 열 구분자로 디폴트 구분자를 사용한다.
 	 * <br>
 	 * ex) rs를 RD 파일 형식으로 변환하는 경우 : String rd = RDUtil.format(rs)
-	 * 
+	 *
 	 * @param rs 변환할 RecordSet 객체
-	 * 
+	 *
 	 * @return RD 파일 형식으로 변환된 문자열
 	 * @throws ColumnNotFoundException ColumnNotFoundException
 	 */
@@ -101,7 +101,7 @@ public class RDUtil {
 	 * RecordSet을 RD 파일 형식으로 변환한다.
 	 * <br>
 	 * ex) rs를 열구분자 ##, 행구분자 !! 인 RD 파일 형식으로 변환하는 경우 : String rd = RDUtil.format(rs, "##", "!!")
-	 * 
+	 *
 	 * @param rs 변환할 RecordSet 객체
 	 * @param colSep 열 구분자로 쓰일 문자열
 	 * @param lineSep 행 구분자로 쓰일 문자열
@@ -132,10 +132,10 @@ public class RDUtil {
 	 * 행, 열 구분자로 디폴트 구분자를 사용한다.
 	 * <br>
 	 * ex) response로 rs를 RD 파일 형식으로 출력하는 경우 : RDUtil.setResultSet(response, rs)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs RD 파일 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
-	 * @return 처리건수 
+	 * @return 처리건수
 	 * @throws SQLException SQLException
 	 * @throws IOException IOException
 	 */
@@ -147,7 +147,7 @@ public class RDUtil {
 	 * ResultSet을 RD 파일 형식으로 출력한다.
 	 * <br>
 	 * ex) response로 rs를 RD 파일 형식으로 출력하는 경우 : RDUtil.setResultSet(response, rs)
-	 * 
+	 *
 	 * @param response 클라이언트로 응답할 Response 객체
 	 * @param rs RD 파일 형식으로 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * @param colSep 열 구분자로 쓰일 문자열
@@ -212,9 +212,9 @@ public class RDUtil {
 	 * 행, 열 구분자로 디폴트 구분자를 사용한다.
 	 * <br>
 	 * ex) rs를 RD 파일 형식으로 변환하는 경우 : String rd = RDUtil.format(rs)
-	 * 
+	 *
 	 * @param rs 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
-	 * 
+	 *
 	 * @return RD 파일 형식으로 변환된 문자열
 	 * @throws SQLException SQLException
 	 */
@@ -226,11 +226,11 @@ public class RDUtil {
 	 * ResultSet을 RD 파일 형식으로 변환한다.
 	 * <br>
 	 * ex) rs를 열구분자 ##, 행구분자 !! 인 RD 파일 형식으로 변환하는 경우 : String rd = RDUtil.format(rs, "##", "!!")
-	 * 
+	 *
 	 * @param rs 변환할 ResultSet 객체, ResultSet 객체는 자동으로 close 된다.
 	 * @param colSep 열 구분자로 쓰일 문자열
 	 * @param lineSep 행 구분자로 쓰일 문자열
-	 * 
+	 *
 	 * @return RD 파일 형식으로 변환된 문자열
 	 * @throws SQLException SQLException
 	 */
@@ -378,7 +378,7 @@ public class RDUtil {
 
 	/**
 	 * RD(리포트디자이너) 용 Row 문자열 생성
-	 * @throws ColumnNotFoundException 
+	 * @throws ColumnNotFoundException
 	 */
 	private static String rdRowStr(RecordSet rs, String[] colNms, String colSep) throws ColumnNotFoundException {
 		StringBuilder buffer = new StringBuilder();
